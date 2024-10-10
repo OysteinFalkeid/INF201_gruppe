@@ -1,0 +1,45 @@
+innlevering 5
+
+Group members:
+
+Oystein Falkeid
+e-mail: oystein.falkeid@nmbu.no
+
+Eirik Mentyjaervi
+e-mail: eirik.mentyjarvi@nmbu.no
+
+------------------------------------------------------------------------
+Task 0: Warmup exercise (0 points)
+
+1 Define a function called inplace_add_vectors(vec1, vec2):
+[5, 7, 9]
+
+2 Define a function called add_vectors(vec1, vec2):
+[1, 2, 3]
+[5, 7, 9]
+
+------------------------------------------------------------------------
+Task 1: Matrix operations (2 points)
+
+the mean value is: 49.50281516
+
+the matrix multiplied is:
+[[138  36 102 ...  84  90 108]
+ [106 130 182 ...  58 172 192]
+ [166 100  40 ...  76 130  62]
+ ...
+ [ 32  20 142 ...  58 136  30]
+ [ 42 120  30 ...  52  92   6]
+ [110  40 110 ... 140  48  94]]
+
+the variance is: 833.5340624617351 
+and this value is equivalent to the numpy variance: 833.5340624748745
+------------------------------------------------------------------------
+Task 2: Stencil matrix (3 points)
+
+eigenvalue calculated with for loop is: 3.9817992757721345 
+and the eigenvalue calculated with numpy is: 3.996206657474087
+------------------------------------------------------------------------
+Task 3: Challenge exercise (0 points)
+
+------------------------------------------------------------------------
