@@ -1,0 +1,28 @@
+Task 1: Regex (3 points)
+          Friendships
+-------------------------------
+           Ali - Per
+          Kari - Joe
+         James - Peter
+
+
+Task 2: Password Validation (2 points)
+
+Write a "strong" password: J1234
+
+OK
+Write a "strong" password: I_ab5
+
+OK
+Write a "strong" password: Z9_w4
+
+OK
+Write a "strong" password: A1234
+
+not valid
+Write a "strong" password: J12345
+
+not valid
+Write a "strong" password: I__
+
+not valid
