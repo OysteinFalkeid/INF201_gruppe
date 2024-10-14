@@ -1,0 +1,22 @@
+innlevering 5
+
+Group members:
+
+Oystein Falkeid
+e-mail: oystein.falkeid@nmbu.no
+
+Eirik Mentyjaervi
+e-mail: eirik.mentyjarvi@nmbu.no
+
+------------------------------------------------------------------------
+Task 0: Warmup Exercise (0 points)
+
+the labradoodle barks
+The Orange cat meows
+------------------------------------------------------------------------
+Task 1: University System Simulation (10 points)
+
+------------------------------------------------------------------------
+Task 2: Challenge assignment (0 points)
+
+------------------------------------------------------------------------
