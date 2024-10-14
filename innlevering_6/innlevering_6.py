@@ -50,27 +50,27 @@ print()
 
 class Animal:
     def __init__(self, name: str, age: int):
-        self.name = name
-        self.age = age
+        self._name = name
+        self._age = age
         
     def make_sound(self) -> None:
-        print(f'the {self.name} makes a sound')
+        print(f'the {self._name} makes a sound')
 
 class Dog(Animal):
     def __init__(self, name: str, age: int, breed: str):
         super().__init__(name, age)
-        self.breed = breed
+        self._breed = breed
     
     def make_sound(self) -> None:
-        print(f'the {self.breed} barks')
+        print(f'the {self._breed} barks')
         
 class Cat(Animal):
     def __init__(self, name: str, age: int, color: str):
         super().__init__(name, age)
-        self.color = color
+        self._color = color
         
     def make_sound(self):
-        print(f'The {self.color} cat meows')
+        print(f'The {self._color} cat meows')
 
 pluto = Dog('Pluto', 12, 'labradoodle')
 garfeeld = Cat('Garfeeld', 9, 'orange')
@@ -140,6 +140,56 @@ print('------------------------------------------------------------------------'
 print('Task 1: University System Simulation (10 points)')
 print()
 
+class Person:
+    def __init__(self, name: str, age: int,email: str):
+        self._name = name
+        self._age = age
+        self._email = email
+    
+    def __str__(self):
+        return (f'Name: {self._name}, Age: {self._age}, Email: {self._email}')
+    
+    def get_details(self):
+        return (f'Name: {self._name}, Age: {self._age}, Email: {self._email}')
+
+
+class Student(Person):
+    def __init__(self, name: str, age: int, email: str, id: str, courses: list[str]) -> None:
+        super().__init__(name, age, email)
+        self._student_id = id
+        self._courses = courses
+    
+    def enroll_in_course(self, course: int) -> None:
+        if course not in self._courses:
+            self._courses.append(course)
+            print(f'student { self._name} hase enroled to {course}')
+        else:
+            print(f'course {course} alreaddy in list')
+
+class Teacher(Person):
+    def __init__(self, name: str, age: int, email: str, subject: str):
+        super().__init__(name, age, email)
+        self._subject = subject
+    
+    def assign_grade(student, grade):
+        print(f'the {student} got the grade {grade}')
+
+class Course:
+    def __init__(self, course_name: str, course_code: int, enrolled_students: list):
+        self._course_name = course_name
+        self._course_code = course_code
+        self._enrolled_students = enrolled_students
+        
+    def add_student(self, student) -> None:
+        if student not in self._enrolled_students:
+            self._enrolled_students.append(student)
+            student.enroll_in_course(self._course_code)
+        else:
+            print('student alreaddy enroled')
+            
+    def list_students(self):
+            for student in self._enrolled_students:
+                print(student)
 
 print('------------------------------------------------------------------------')
 #-------------------------------------------------------------------------------------------------------------------
