@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 #printer til fil i stedenfor terminal
-file = Path('.') / Path('terminal.txt')
+file = Path.cwd() / Path('terminal.txt')
 sys.stdout = open(file, 'w')
 
 print('innlevering 5')
@@ -38,6 +38,7 @@ print()
 import numpy as np # henter numpy til å brukes i oppgavene
 from typing import Union
 from typing import Optional
+from random import randint
 
 print('------------------------------------------------------------------------')
 #-------------------------------------------------------------------------------------------------------------------
@@ -82,115 +83,121 @@ print('------------------------------------------------------------------------'
 #-------------------------------------------------------------------------------------------------------------------
 
 # Task 1: University System Simulation (10 points)
-# In this exercise, you will design and implement a simple university system using object-oriented programming (OOP) principles in Python. You will build a system where students enroll in courses, teachers assign grades, and courses track their enrolled students. 
-
-# Part 1: Core Class Structure
-# In the first part of the exercise, you will focus on creating the core classes and implementing basic functionality.
-
-# Step 1: Create the Person Class
-# Create a base class called Person. This class will serve as the foundation for other types of people at the university (e.g., students and teachers).
-# Person should have the following attributes (member variables):
-# _name: The person's name.
-# _age: The person's age.
-# _email: The person's email address.
-# Implement a method get_details() that returns a string containing the person’s information in the format: Name: <name>, Age: <age>, Email: <email>.
-# Step 2: Create Derived Classes Student and Teacher
-# Next, you will create two classes that inherit from Person: Student and Teacher.
-
-# Student:
-
-# Inherit from Person.
-# Add a member variable _student_id to store the student's ID.
-# Add a member variable _courses (a list) to store the courses the student is enrolled in.
-# Create a method enroll_in_course(course) that allows a student to enroll in a course by adding the course to the courses list.
-# Teacher:
-
-# Inherit from Person.
-# Add a member variable subject to store the subject the teacher teaches.
-# Implement a method assign_grade(student, grade) that prints a message indicating the grade assigned to the student by the teacher. You will add more functionality to this method in Part 2 of this exercise.
-# Step 3: Create the Course Class
-# Define a Course class that will represent a university course.
-# The class should have the following attributes:
-# _course_name: The name of the course.
-# _course_code: The course's unique code (e.g., "INF201").
-# _enrolled_students: A list that stores all the students enrolled in the course.
-# Implement a method add_student(student) to enroll a student in the course. This should add the student to the enrolled_students list and also enroll the student in the course by calling their enroll_in_course(course) method.
-# Create a method list_students() that returns a list of all students enrolled in the course (calling each student’s get_details() method).
-# Part 2: Adding Advanced Features
-# In the second part of the exercise, you will extend the functionality of the Student and Teacher classes and make the interactions between classes more dynamic.
-
-# Step 4: Add Grade Management
-# Modify the Student class to store a dictionary of grades for each course.
-
-# Add a member variable grades (a dictionary) where keys are course names and values are grades.
-# Implement a method assign_grade(course, grade) that allows a student to store the grade they received for a course in the grades dictionary.
-# Create a method get_grades() that returns the dictionary of courses and grades.
-# Update the Teacher class so that the assign_grade() method assigns grades to students by calling their assign_grade(course, grade) method, rather than just printing a message.
-
-# Step 5: Test the System
-# Simulate a real-world scenario by creating instances of Teacher, Student, and Course. Implement the following functionality:
-
-# Create a few Student objects and a Teacher object.
-# Create at least one Course and enroll students in the course.
-# Use the Teacher class to assign grades to students for the course.
-# Have students check their grades by calling their get_grades() method.
-# List all the students enrolled in the course by using the list_students() method.
  
 #-------------------------------------------------------------------------------------------------------------------
 print('Task 1: University System Simulation (10 points)')
 print()
 
+type person_class = Person
+type teacher_class = Teacher
+type student_class = Student
+type course_class = Course
+
+# Step 1: Create the Person Class
 class Person:
-    def __init__(self, name: str, age: int,email: str):
+    def __init__(self, name: str, age: int,email: str) -> None:
         self._name = name
         self._age = age
         self._email = email
     
-    def __str__(self):
+    def __str__(self) -> str:
         return (f'Name: {self._name}, Age: {self._age}, Email: {self._email}')
     
-    def get_details(self):
+    def get_details(self) -> str:
         return (f'Name: {self._name}, Age: {self._age}, Email: {self._email}')
 
-
+#Step 2: Create Derived Classes Student and Teacher
 class Student(Person):
-    def __init__(self, name: str, age: int, email: str, id: str, courses: list[str]) -> None:
+    def __init__(self, name: str, age: int, email: str, id: str, courses: Optional[list[str]] = None) -> None:
         super().__init__(name, age, email)
         self._student_id = id
-        self._courses = courses
+        if courses:
+            self._courses = courses
+        else:
+            self._courses = []
+        #Step 4: Add Grade Management
+        self._grades = {}
     
-    def enroll_in_course(self, course: int) -> None:
+    def enroll_in_course(self, course: str) -> None:
         if course not in self._courses:
             self._courses.append(course)
             print(f'student { self._name} hase enroled to {course}')
         else:
             print(f'course {course} alreaddy in list')
+    
+    #Step 4: Add Grade Management 
+    def assign_grade(self, course: str, grade: int) -> None:
+        self._grades[course] = grade
+    
+    #Step 4: Add Grade Management
+    def get_grades(self) -> dict:
+        return self._grades
+    
+    def __str__(self):
+        string = super().__str__()
+        string += (f', Student ID: {self._student_id}')
+        return string
 
 class Teacher(Person):
-    def __init__(self, name: str, age: int, email: str, subject: str):
+    def __init__(self, name: str, age: int, email: str, subject: str) -> None:
         super().__init__(name, age, email)
         self._subject = subject
     
-    def assign_grade(student, grade):
-        print(f'the {student} got the grade {grade}')
+    #Step 4: Add Grade Management
+    def assign_grade(self, student: student_class, course: str, grade: int) -> None:
+        student.assign_grade(course, grade)
 
+#Step 3: Create the Course Class
 class Course:
-    def __init__(self, course_name: str, course_code: int, enrolled_students: list):
-        self._course_name = course_name
-        self._course_code = course_code
-        self._enrolled_students = enrolled_students
+    def __init__(self, name: str, code: int, enrolled_students: Optional[list[student_class]] = None) -> None:
+        self._course_name = name
+        self._course_code = code
+        if enrolled_students:
+            self._enrolled_students = enrolled_students
+        else:
+            self._enrolled_students = []
         
-    def add_student(self, student) -> None:
+    def add_student(self, student: student_class) -> None:
         if student not in self._enrolled_students:
             self._enrolled_students.append(student)
             student.enroll_in_course(self._course_code)
         else:
             print('student alreaddy enroled')
             
-    def list_students(self):
+    def list_students(self) -> None:
             for student in self._enrolled_students:
                 print(student)
 
+#Step 5: Test the System  
+#Create a few Student objects and a Teacher object.            
+teacher_1 = Teacher(name='teacher_1', age=6, email='teacher_1@nmbu.no', subject='programering')
+
+student_1 = Student(name='student_1', age=1, email='student_1@nmbu.no', id=1)
+student_2 = Student(name='student_2', age=2, email='student_2@nmbu.no', id=2)
+student_3 = Student(name='student_3', age=3, email='student_3@nmbu.no', id=3)
+student_4 = Student(name='student_4', age=4, email='student_4@nmbu.no', id=4)
+student_5 = Student(name='student_5', age=5, email='student_5@nmbu.no', id=5)
+students = [student_1, student_2, student_3, student_4, student_5]
+
+#Create at least one Course and enroll students in the course.
+course_1 = Course(name='programering', code=201)
+
+for student in students:
+    course_1.add_student(student)
+print()
+
+for student in students: 
+    #Use the Teacher class to assign grades to students for the course.
+    teacher_1.assign_grade(student=student, course='programering', grade=randint(1, 6))
+    
+    #Have students check their grades by calling their get_grades() method.
+    print(student.get_grades())
+print()
+
+#List all the students enrolled in the course by using the list_students() method.
+course_1.list_students()
+
+print()
 print('------------------------------------------------------------------------')
 #-------------------------------------------------------------------------------------------------------------------
 

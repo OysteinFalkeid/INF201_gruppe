@@ -12,9 +12,27 @@ e-mail: eirik.mentyjarvi@nmbu.no
 Task 0: Warmup Exercise (0 points)
 
 the labradoodle barks
-The Orange cat meows
+The orange cat meows
 ------------------------------------------------------------------------
 Task 1: University System Simulation (10 points)
+
+student student_1 hase enroled to 201
+student student_2 hase enroled to 201
+student student_3 hase enroled to 201
+student student_4 hase enroled to 201
+student student_5 hase enroled to 201
+
+{'programering': 3}
+{'programering': 4}
+{'programering': 6}
+{'programering': 6}
+{'programering': 6}
+
+Name: student_1, Age: 1, Email: student_1@nmbu.no, Student ID: 1
+Name: student_2, Age: 2, Email: student_2@nmbu.no, Student ID: 2
+Name: student_3, Age: 3, Email: student_3@nmbu.no, Student ID: 3
+Name: student_4, Age: 4, Email: student_4@nmbu.no, Student ID: 4
+Name: student_5, Age: 5, Email: student_5@nmbu.no, Student ID: 5
 
 ------------------------------------------------------------------------
 Task 2: Challenge assignment (0 points)
