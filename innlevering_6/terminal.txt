@@ -22,9 +22,9 @@ student student_3 hase enroled to 201
 student student_4 hase enroled to 201
 student student_5 hase enroled to 201
 
+{'programering': 5}
 {'programering': 3}
-{'programering': 4}
-{'programering': 6}
+{'programering': 5}
 {'programering': 6}
 {'programering': 6}
 
@@ -37,4 +37,6 @@ Name: student_5, Age: 5, Email: student_5@nmbu.no, Student ID: 5
 ------------------------------------------------------------------------
 Task 2: Challenge assignment (0 points)
 
+[3.29387957e+60 4.23276096e+60 4.37617843e+60 3.47861265e+60
+ 2.77821004e+60 3.16135298e+60 4.33356960e+60 3.24419229e+60]
 ------------------------------------------------------------------------

@@ -238,5 +238,75 @@ print('Task 2: Challenge assignment (0 points)')
 print()
 
 
+class Layer:
+    def __init__(self, matrix = None, vector = None, y = [], x = []):
+        if matrix:
+            self._M = matrix
+        else:
+            self.set_random_value_M()
+        
+        if vector:
+            self._B = vector
+        else:
+            self.set_random_value_B()
+
+        self._y = y
+        self._x = x
+        
+        def _sigma(y):
+            return y
+        self._sigma_vec = np.vectorize(_sigma)
+    
+    def output(self, x) -> np.ndarray:
+        return self._sigma_vec(self._M @ x + self._B)
+    
+    def set_M(self, M):
+        self._M = M
+        
+    def set_B(self, B):
+        self._B = B
+        
+    def set_variables(self, M, B, y = None):
+        self.set_M(M)
+        self.set_B(B)
+        if y:
+            self._y = y
+    
+    def set_random_value_M(self, shape = (8,8)):
+        self.set_M(np.random.rand(shape[0], shape[1]))
+    
+    def set_random_value_B(self, shape = 8):
+        self.set_B(np.random.rand(shape))
+    
+    def set_random_values(self, shape = (8,8)):
+        self.set_random_value_M(shape)
+        self.set_random_value_B(shape[0])
+    
+    def get_x(self):
+        return self._x
+    
+    def get_y(self):
+        return self._y
+        
+    def calculate_x(self, x = None):
+        if x is not None:
+            self._x = x
+        elif self._x is [] and self._y is []:
+            self._x = self._y
+            
+        self._y = self.output(x=self._x)
+        
+x = np.random.rand(64)
+layer = Layer(x=x)
+layer.set_random_value_M((8,64))
+layer.calculate_x()
+
+for layers in range(10):
+    layer.set_random_values()
+    layer.calculate_x(x=layer.get_y())
+    
+print(layer.get_x())
+
+
 print('------------------------------------------------------------------------')
 #-------------------------------------------------------------------------------------------------------------------
