@@ -13,7 +13,7 @@ from pathlib import Path
 
 #printer til fil i stedenfor terminal
 file = Path.cwd() / Path('terminal.txt')
-sys.stdout = open(file, 'w')
+sys.stdout = open(file, 'w',encoding='utf-8')
 
 print('innlevering 5')
 print()
@@ -106,11 +106,14 @@ class Person:
     def get_details(self) -> str:
         return (f'Name: {self._name}, Age: {self._age}, Email: {self._email}')
 
+    def get_name(self) -> str:
+        return self._name
+    
 #Step 2: Create Derived Classes Student and Teacher
 class Student(Person):
-    def __init__(self, name: str, age: int, email: str, id: str, courses: Optional[list[str]] = None) -> None:
+    def __init__(self, name: str, age: int, email: str, ID: str, courses: Optional[list[str]] = None) -> None:
         super().__init__(name, age, email)
-        self._student_id = id
+        self._student_ID = ID
         if courses:
             self._courses = courses
         else:
@@ -135,7 +138,7 @@ class Student(Person):
     
     def __str__(self):
         string = super().__str__()
-        string += (f', Student ID: {self._student_id}')
+        string += (f', Student ID: {self._student_ID}')
         return string
 
 class Teacher(Person):
@@ -149,7 +152,7 @@ class Teacher(Person):
 
 #Step 3: Create the Course Class
 class Course:
-    def __init__(self, name: str, code: int, enrolled_students: Optional[list[student_class]] = None) -> None:
+    def __init__(self, name: str, code: str, enrolled_students: Optional[list[student_class]] = None) -> None:
         self._course_name = name
         self._course_code = code
         if enrolled_students:
@@ -169,32 +172,50 @@ class Course:
                 print(student)
 
 #Step 5: Test the System  
-#Create a few Student objects and a Teacher object.            
-teacher_1 = Teacher(name='teacher_1', age=6, email='teacher_1@nmbu.no', subject='programering')
+#Create a few Student objects and a Teacher object.   
+teacher_0 = Teacher(name='teacher_1', age=6, email='teacher_1@nmbu.no', subject='Algebra')      
+teacher_1 = Teacher(name='teacher_1', age=6, email='teacher_1@nmbu.no', subject='Videregående programmering')
 
-student_1 = Student(name='student_1', age=1, email='student_1@nmbu.no', id=1)
-student_2 = Student(name='student_2', age=2, email='student_2@nmbu.no', id=2)
-student_3 = Student(name='student_3', age=3, email='student_3@nmbu.no', id=3)
-student_4 = Student(name='student_4', age=4, email='student_4@nmbu.no', id=4)
-student_5 = Student(name='student_5', age=5, email='student_5@nmbu.no', id=5)
-students = [student_1, student_2, student_3, student_4, student_5]
+student_1 = Student(name='student_1', age=1, email='student_1@nmbu.no', ID=1)
+student_2 = Student(name='student_2', age=2, email='student_2@nmbu.no', ID=2)
+student_3 = Student(name='student_3', age=3, email='student_3@nmbu.no', ID=3)
+student_4 = Student(name='student_4', age=4, email='student_4@nmbu.no', ID=4)
+student_5 = Student(name='student_5', age=5, email='student_5@nmbu.no', ID=5)
 
 #Create at least one Course and enroll students in the course.
-course_1 = Course(name='programering', code=201)
+course_0 = Course('Algebra', 'MATH201')
+course_1 = Course('Videregående programmering', 'INF201')
 
+print('enroles students in Algebra')
+course_0.add_student(student_1)
+course_0.add_student(student_2)
+
+teacher_0.assign_grade(student=student_1, course='Algebra', grade=randint(1, 6))
+teacher_0.assign_grade(student=student_2, course='Algebra', grade=randint(1, 6))
+print()
+
+students = [student_1, student_2, student_3, student_4, student_5]
+print('enroles students in Videregående programmering')
 for student in students:
     course_1.add_student(student)
 print()
 
 for student in students: 
     #Use the Teacher class to assign grades to students for the course.
-    teacher_1.assign_grade(student=student, course='programering', grade=randint(1, 6))
-    
+    teacher_1.assign_grade(student=student, course='Videregående programmering', grade=randint(1, 6))
+
+print('printing the grades of all students')
+for student in students: 
     #Have students check their grades by calling their get_grades() method.
-    print(student.get_grades())
+    print(f'{student.get_name()} {student.get_grades()}')
 print()
 
 #List all the students enrolled in the course by using the list_students() method.
+print('students enroled in Algebra')
+course_0.list_students()
+print()
+
+print('students enroled in Videregående programmering')
 course_1.list_students()
 
 print()
@@ -202,37 +223,7 @@ print('------------------------------------------------------------------------'
 #-------------------------------------------------------------------------------------------------------------------
 
 # Task 2: Challenge assignment (0 points)
-# Implement a single layer neural network. That is, implement 
-#  where 
-#  are called the weights, 
-#  is the input (this can contain the pixels of a 8 by 8 pixel image, that is, 
-# ), and 
-#  is the bias. The function 
-#  applies the so-called reluLinks to an external site. function element-wise. That is, for a scalar 
-#  we have 
-#  if 
-#  and 
-#  if 
-# . Or in less mathematical terms, make sure that 
-#  is a data array with 
-#  rows and 
-#  columns, 
-#  is a data vector with 
-#  entries, and 
-#  is a data vector with 
-#  entries. 
-# Extend the neural network to a second layer, i.e., use the output of the first layer as input to a second layer 
-# , where 
-# , and 
-# .
-# Repeat this process for a given and variable number of L layers. The dimensions of all layers should be defined in a vector 
-# . Make sure your program does not modify the input 
-#  when computing the response of your neural network.
-# Print the output of your program 
-#  (which is the output of the neural network) as well as the dimensions of all weight matrices for 
-# . For now, random numbers should be used in all matrices and vectors that require initialization. In the future, we will choose the pixels of the MNIST datasetLinks to an external site. as 
-#  and pick trained and meaningful weights and biases so that your network will be able to recognize the number in your image.
- 
+
 #-------------------------------------------------------------------------------------------------------------------
 print('Task 2: Challenge assignment (0 points)')
 print()

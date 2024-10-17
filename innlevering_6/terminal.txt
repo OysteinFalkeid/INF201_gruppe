@@ -16,18 +16,29 @@ The orange cat meows
 ------------------------------------------------------------------------
 Task 1: University System Simulation (10 points)
 
-student student_1 hase enroled to 201
-student student_2 hase enroled to 201
-student student_3 hase enroled to 201
-student student_4 hase enroled to 201
-student student_5 hase enroled to 201
+enroles students in Algebra
+student student_1 hase enroled to MATH201
+student student_2 hase enroled to MATH201
 
-{'programering': 5}
-{'programering': 3}
-{'programering': 5}
-{'programering': 6}
-{'programering': 6}
+enroles students in Videregående programmering
+student student_1 hase enroled to INF201
+student student_2 hase enroled to INF201
+student student_3 hase enroled to INF201
+student student_4 hase enroled to INF201
+student student_5 hase enroled to INF201
 
+printing the grades of all students
+student_1 {'Algebra': 1, 'Videregående programmering': 6}
+student_2 {'Algebra': 2, 'Videregående programmering': 6}
+student_3 {'Videregående programmering': 2}
+student_4 {'Videregående programmering': 1}
+student_5 {'Videregående programmering': 2}
+
+students enroled in Algebra
+Name: student_1, Age: 1, Email: student_1@nmbu.no, Student ID: 1
+Name: student_2, Age: 2, Email: student_2@nmbu.no, Student ID: 2
+
+students enroled in Videregående programmering
 Name: student_1, Age: 1, Email: student_1@nmbu.no, Student ID: 1
 Name: student_2, Age: 2, Email: student_2@nmbu.no, Student ID: 2
 Name: student_3, Age: 3, Email: student_3@nmbu.no, Student ID: 3
@@ -37,6 +48,6 @@ Name: student_5, Age: 5, Email: student_5@nmbu.no, Student ID: 5
 ------------------------------------------------------------------------
 Task 2: Challenge assignment (0 points)
 
-[3.29387957e+60 4.23276096e+60 4.37617843e+60 3.47861265e+60
- 2.77821004e+60 3.16135298e+60 4.33356960e+60 3.24419229e+60]
+[3947383.39086417 3700290.33419433 6193847.42693197 4741590.83042388
+ 3732603.49548508 2841113.1253351  3127015.48934159 4854443.92999916]
 ------------------------------------------------------------------------
