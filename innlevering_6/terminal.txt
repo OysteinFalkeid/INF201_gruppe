@@ -1,4 +1,4 @@
-innlevering 5
+innlevering 6
 
 Group members:
 
@@ -28,10 +28,10 @@ student student_4 hase enroled to INF201
 student student_5 hase enroled to INF201
 
 printing the grades of all students
-student_1 {'Algebra': 1, 'Videregående programmering': 6}
-student_2 {'Algebra': 2, 'Videregående programmering': 6}
-student_3 {'Videregående programmering': 2}
-student_4 {'Videregående programmering': 1}
+student_1 {'Algebra': 2, 'Videregående programmering': 6}
+student_2 {'Algebra': 4, 'Videregående programmering': 2}
+student_3 {'Videregående programmering': 5}
+student_4 {'Videregående programmering': 5}
 student_5 {'Videregående programmering': 2}
 
 students enroled in Algebra
@@ -48,6 +48,6 @@ Name: student_5, Age: 5, Email: student_5@nmbu.no, Student ID: 5
 ------------------------------------------------------------------------
 Task 2: Challenge assignment (0 points)
 
-[3947383.39086417 3700290.33419433 6193847.42693197 4741590.83042388
- 3732603.49548508 2841113.1253351  3127015.48934159 4854443.92999916]
+[6020835.4837723  3400973.79249189 5915837.28504222 4391818.1793682
+ 5557142.39840901 3623051.78393037 3426462.54458624 4211795.6652432 ]
 ------------------------------------------------------------------------

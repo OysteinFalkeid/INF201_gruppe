@@ -15,7 +15,7 @@ from pathlib import Path
 file = Path.cwd() / Path('terminal.txt')
 sys.stdout = open(file, 'w',encoding='utf-8')
 
-print('innlevering 5')
+print('innlevering 6')
 print()
 
 # How to work on this exercise
