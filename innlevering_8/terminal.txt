@@ -8,5 +8,3 @@ e-mail: oystein.falkeid@nmbu.no
 Eirik Mentyjaervi
 e-mail: eirik.mentyjarvi@nmbu.no
 
-[1, 2, 3]
-1

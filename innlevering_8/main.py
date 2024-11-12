@@ -57,7 +57,7 @@ class Mesh:
         self._points = []
         self._cells = []
         if path:
-            self.read(path)
+            self.mesh = self.read(path)
         
     def read(self, path: str) -> object:
         '''
@@ -71,6 +71,9 @@ class Mesh:
             Saves file content as lists at points and cells
         '''
         msh = meshio.read(path)
+        
+        for point in msh.points:
+            pass
         return msh
     
     @property
@@ -147,5 +150,6 @@ class Line(Cell):
 
 trekant = Triangle(1, 1, 2, 3)
 
-
-
+path = Path.cwd() / Path('simple.msh')
+mesh = meshio.read(path)
+print(mesh)
