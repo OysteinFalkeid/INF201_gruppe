@@ -32,17 +32,35 @@ print()
 
 import meshio
 from pathlib import Path
+from abc import ABC, abstractmethod
 
 #-------------------------------------------------------------------------------------------------------------------
-# Task 1
+# Task 2
 
-msh_name = Path.cwd() / Path('simple.msh')
-msh = meshio.read(msh_name)
-points = msh.points  # mesh points
-cells = msh.cells    # mesh cells
-cell = cells[1].data[222]
-print(cell)
-print(cells[1].type)
+
+class mesh:
+    def __init__(self):
+        self._point = []
+        self._cell = []
+        
+    def read(self, path: str) -> object:
+        msh = meshio.read(path)
+        return msh
+            
+
+class point:
+    def __init__(self, x, y):
+        self._x = 0.0
+        self._y = 0.0
+        
+
+class cell(ABC):
+    def __init__(self):
+        super().__init__()
+        
+
+
+
 
 
 
