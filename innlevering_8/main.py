@@ -30,9 +30,20 @@ print('Eirik Mentyjaervi')
 print('e-mail: eirik.mentyjarvi@nmbu.no')   
 print()                  
 
+import meshio
+from pathlib import Path
 
 #-------------------------------------------------------------------------------------------------------------------
 # Task 2
+
+msh_name = Path.cwd() / Path('simple.msh')
+msh = meshio.read(msh_name)
+points = msh.points  # mesh points
+cells = msh.cells    # mesh cells
+cell = cells[1].data[222]
+print(cell)
+print(cells[1].type)
+
 
 
 
