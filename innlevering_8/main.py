@@ -66,8 +66,16 @@ class BiologyStudent(Student):
         string = f"Biology Student: [{self._name}], ID: [{self._student_id}]"
         return string   
 
+class StudentFactory:
+    def __init__(self, key):
+        self._key = key
+    def register(self, key, student_class):
+
+
 a = BiologyStudent('Eirik', 10)
+b = DataScienceStudent('Øystein', 11)
 print(a)
+print(b)
 #-------------------------------------------------------------------------------------------------------------------
 # Task 1
 

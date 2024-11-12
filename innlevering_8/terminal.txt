@@ -9,3 +9,4 @@ Eirik Mentyjaervi
 e-mail: eirik.mentyjarvi@nmbu.no
 
 Biology Student: [Eirik], ID: [10]
+Data Science Student: [11] - [Øystein]
