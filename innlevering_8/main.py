@@ -41,15 +41,45 @@ from typing import Optional
 
 class Mesh:
     def __init__(self, path: Optional[str] = None):
-        self._point = []
-        self._cell = []
+        '''
+        Creates a class containing lists of points and cells.
+        The class has a read function that reads from .msh file if path exists
+        
+        Args:
+            path (str): The path to the .msh file containing the mesh
+            
+        Examples:
+            >>> Mesh(my/path.msh)
+            object containing lists based on my/path.msh
+            >>> Mesh()
+            Emptey object
+        '''
+        self._points = []
+        self._cells = []
         if path:
             self.read(path)
         
     def read(self, path: str) -> object:
+        '''
+        Reads from file at path. Saves file content as lists.
+        
+        Args:
+            path (str): The path to the .msh file containing the mesh
+            
+        Examples:
+            >>> read(my/path.msh)
+            Saves file content as lists at points and cells
+        '''
         msh = meshio.read(path)
         return msh
-            
+    
+    @property
+    def points(self):
+        return self._points
+    
+    @property
+    def cells(self):
+        return self._cells
 
 class Point:
     def __init__(self, index: int, x: float, y: float):
@@ -61,24 +91,44 @@ class Point:
             self._y = y
         else:
             print('point init missing coordinates')
+    
+    @property
+    def index(self):
+        return self._index
+    
+    @property
+    def x(self):
+        return self._x
+    
+    @property
+    def y(self):
+        return self._y
         
 
 class Cell(ABC):
     def __init__(self, index: int):
-        self._index = index
-        self._point = []
         super().__init__()
+        self._index = index
+        self._points = []
     
     @abstractmethod
     def __str__(self):
         string = 'Index: ' + str(self._index)
         return string
     
+    @property
+    def index(self):
+        return self._index
+    
+    @property
+    def points(self):
+        return self._points
+    
 
 class Triangle(Cell):
     def __init__(self, index, point_1, point_2, point_3):
         super().__init__(index)
-        self._point = [point_1, point_2, point_3]
+        self._points = [point_1, point_2, point_3]
     
     def __str__(self):
         string = super().__str__()
@@ -88,16 +138,14 @@ class Triangle(Cell):
 class Line(Cell):
     def __init__(self, index, point_1, point_2):
         super().__init__(index)
-        self._point = [point_1, point_2]
+        self._points = [point_1, point_2]
     
     def __str__(self):
         string = super().__str__()
         string += f', Points: ({self._point[0]}, {self._point[1]})'
         return string
 
-
-
-
+trekant = Triangle(1, 1, 2, 3)
 
 
 
