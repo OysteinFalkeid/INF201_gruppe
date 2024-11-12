@@ -49,9 +49,15 @@ class mesh:
             
 
 class point:
-    def __init__(self, x, y):
+    def __init__(self, x: float, y: float):
         self._x = 0.0
         self._y = 0.0
+        if x and y:
+            self._x = x
+            self._y = y
+        
+            
+        
         
 
 class cell(ABC):
