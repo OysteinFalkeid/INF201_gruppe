@@ -34,7 +34,7 @@ import meshio
 from pathlib import Path
 
 #-------------------------------------------------------------------------------------------------------------------
-# Task 2
+# Task 1
 
 msh_name = Path.cwd() / Path('simple.msh')
 msh = meshio.read(msh_name)
