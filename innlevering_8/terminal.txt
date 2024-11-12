@@ -8,5 +8,4 @@ e-mail: oystein.falkeid@nmbu.no
 Eirik Mentyjaervi
 e-mail: eirik.mentyjarvi@nmbu.no
 
-Biology Student: [Eirik], ID: [10]
-Data Science Student: [11] - [Øystein]
+Name: Eirik, StudentID: 10, Course: Data Science
