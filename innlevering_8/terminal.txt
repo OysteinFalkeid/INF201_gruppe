@@ -8,6 +8,4 @@ e-mail: oystein.falkeid@nmbu.no
 Eirik Mentyjaervi
 e-mail: eirik.mentyjarvi@nmbu.no
 
-
-[110 234 128]
-triangle
+Biology Student: [Eirik], ID: [10]
