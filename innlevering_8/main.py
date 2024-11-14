@@ -212,88 +212,6 @@ class MeshFactory:
             list = [int(i) for i in list]
             return self._shape[length](list[0], list[1], list[2], list[3], list[4], list[5:])
 
-
-# class Mesh:
-#     def __init__(self, path: Optional[str] = None):
-#         '''
-#         Creates a class containing lists of points and cells.
-#         The class has a read function that reads from .msh file if path exists
-        
-#         Args:
-#             path (str): The path to the .msh file containing the mesh
-            
-#         Examples:
-#             >>> Mesh(my/path.msh)
-#             object containing lists based on my/path.msh
-#             >>> Mesh()
-#             Emptey object
-#         '''
-#         self._points = []
-#         self._cells = []
-#         if path:
-#             self.mesh = self.read(path)
-        
-#     def read(self, path: str) -> object:
-#         '''
-#         Reads from file at path. Saves file content as lists.
-        
-#         Args:
-#             path (str): The path to the .msh file containing the mesh
-            
-#         Examples:
-#             >>> read(my/path.msh)
-#             Saves file content as lists at points and cells
-#         '''
-#         self._physical_names = []
-#         with open(path, 'r') as file:
-#             while True:
-#                 line = file.readline().strip()
-#                 if line == '':
-#                     break
-#                 elif line == '$MeshFormat':
-#                     line = file.readline().strip().split(' ')
-#                     while line != '$EndMeshFormat':
-#                         line = [float(line[0]), int(line[1]), int(line[2])]
-#                         self._format = line
-#                         line = file.readline().strip()
-#                 elif line == '$PhysicalNames':
-#                     self._num_physical_names = file.readline().strip()
-#                     line = file.readline().strip()
-#                     while line != '$EndPhysicalNames':
-#                         line = line.split(' ')
-#                         line = [int(line[0]), int(line[1]), line[2].strip('"')]
-#                         self._physical_names.append(line)
-#                         line = file.readline().strip()
-#                 elif line == '$Nodes':
-#                     line = file.readline().strip()
-#                     self._num_nodes = int(line)
-#                     line = file.readline().strip().split(' ')
-#                     while line[0] != '$EndNodes':
-#                         self._points.append(Point(int(line[0]), x=float(line[1]), y=float(line[2]), z=float(line[3])))
-#                         line = file.readline().strip().split(' ')
-#                 elif line == '$Elements':
-#                     line = file.readline().strip()
-#                     self._num_elements = line
-#                     line = file.readline().strip().split(' ')
-#                     while len(line) < 8:
-#                         self._cells.append(Line(int(line[0]), element_type=int(line[1]), num_tags=int(line[2]), physical_entity=int(line[3]), elementary_entity=int(line[4]), point_1=int(line[5]), point_2=int(line[6])))
-#                         line = file.readline().strip().split(' ')
-#                     while line[0] != '$EndElements':
-#                         self._cells.append(Triangle(int(line[0]), element_type=int(line[1]), num_tags=int(line[2]), physical_entity=int(line[3]), elementary_entity=int(line[4]), point_1=int(line[5]), point_2=int(line[6]), point_3=int(line[7])))
-#                         line = file.readline().strip().split(' ')
-                
-    
-#     @property
-#     def points(self):
-#         return self._points
-    
-#     @property
-#     def cells(self):
-#         return self._cells
-    
-#     def __str__(self):
-#         return f'Mesh with {len(self.points)} points and {len(self.cells)} cells'
-
 class Mesh:
     def __init__(self, path: Optional[str] = None):
         '''
@@ -368,9 +286,25 @@ class Mesh:
     def cells(self):
         return self._cells
     
+    def determineNeighbors(self):
+        n_list = []
+        i_list = []
+        for cell in self.cells:
+            if cell.type == 1:
+                n_list.append(f"Cell {cell.index}:")
+                for j in self.cells:
+                    if len(set(cell.points.copy()) & set(j.points.copy())) > 0:
+                        n_list.append(j.index)
+                i_list.append(n_list)
+                n_list = []
+            #if cell.type == 2:
+
+        print(i_list)
+        print(type(i_list[0][0]))
+
+
     def __str__(self):
         return f'Mesh with {len(self.points)} points and {len(self.cells)} cells'
-
 
 def main():
     path = Path.cwd() / Path('simple.msh')
@@ -382,6 +316,8 @@ def main():
 
     for cell in mesh.cells:
         print(cell)
+
+    mesh.determineNeighbors()
     
 if __name__ == '__main__':
     main()
