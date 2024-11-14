@@ -372,21 +372,22 @@ class Mesh:
                     self._num_elements = line
                     line = file.readline().strip().split(' ')
                     while len(line) < 8:
-                        self._cells.append(Line(int(line[0]), element_type=int(line[1]), num_tags=int(line[2]), physical_entity=int(line[3]), elementary_entity=int(line[4]), point_1=int(line[5]), point_2=int(line[6])))
+                        temp_list = line[5:]
+                        self._cells.append(Line(int(line[0]), element_type=int(line[1]), num_tags=int(line[2]), physical_entity=int(line[3]), elementary_entity=int(line[4]), temp_list[5:]))
                         line = file.readline().strip().split(' ')
                     while line[0] != '$EndElements':
                         self._cells.append(Triangle(int(line[0]), element_type=int(line[1]), num_tags=int(line[2]), physical_entity=int(line[3]), elementary_entity=int(line[4]), point_1=int(line[5]), point_2=int(line[6]), point_3=int(line[7])))
                         line = file.readline().strip().split(' ')
 
 path = Path.cwd() / Path('simple.msh')
-# mesh = Mesh(path)
+mesh = Mesh(path)
 
-# for point in mesh.points:
-#     print(point)
-# print()
+for point in mesh.points:
+    print(point)
+print()
 
-# for cell in mesh.cells:
-#     print(cell)
+for cell in mesh.cells:
+    print(cell)
 
 class MeshFactory:
     def __init__(self):

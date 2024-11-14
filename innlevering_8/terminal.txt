@@ -8,9 +8,3 @@ e-mail: oystein.falkeid@nmbu.no
 Eirik Mentyjaervi
 e-mail: eirik.mentyjarvi@nmbu.no
 
-Mesh object with index 1
-  Has element type 2, number of tags is 3, physical entity is 4 and elementary entity is 5.
-  The cell is constructed from Points: (6, 7, 8)
-Mesh object with index 1
-  Has element type 2, number of tags is 3, physical entity is 4 and elementary entity is 5.
-  The cell is constructed from Points: (6, 7)
