@@ -90,23 +90,23 @@ class Cell(ABC):
     
 
 class Triangle(Cell):
-    def __init__(self, index, point_1, point_2, point_3):
+    def __init__(self,index,type1,type2,type3,type4,points):
         super().__init__(index)
-        self._points = [point_1, point_2, point_3]
+        self._points = points
     
     def __str__(self):
         string = super().__str__()
-        string += f', Points: ({self._point[0]}, {self._point[1]}, {self._point[2]})'
+        string += f', Points: ({self._points[0]}, {self._points[1]}, {self._points[2]})'
         return string
         
 class Line(Cell):
-    def __init__(self, index, point_1, point_2):
+    def __init__(self, index, points):
         super().__init__(index)
-        self._points = [point_1, point_2]
+        self._points = points
     
     def __str__(self):
         string = super().__str__()
-        string += f', Points: ({self._point[0]}, {self._point[1]})'
+        string += f', Points: ({self._points[0]}, {self._points[1]})'
         return string
 
 class Mesh:
@@ -165,11 +165,8 @@ class Mesh:
                     line = file.readline().strip()
                     self._num_elements = line
                     line = file.readline().strip().split(' ')
-                    while len(line) < 8:
-                        self._cells.append(Line(int(line[0]), float(line[5]), float(line[6])))
-                        line = file.readline().strip().split(' ')
                     while line[0] != '$EndElements':
-                        self._cells.append(Line(int(line[0]), float(line[5]), float(line[6])))
+                        self._cells.append(factory(line))
                         line = file.readline().strip().split(' ')
                 
     
@@ -186,3 +183,26 @@ trekant = Triangle(1, 1, 2, 3)
 path = Path.cwd() / Path('simple.msh')
 mesh = Mesh(path)
 print(mesh.points)
+
+
+class Cell_factory:
+    def __init__(self):
+        self._types = {}
+        
+    @property
+    def type(self):
+        return self._types
+    
+    @type.setter
+    def type(self, length, shape_class):
+        self._types[length] = shape_class
+        
+    def __call__(self, list):
+        list = [int(item) for item in list]
+        length = len(list)
+        return self.type[length](list[0], list[1], list[2], list[3], list[4], list[5:])
+    
+    
+factory = Cell_factory()
+    
+        
