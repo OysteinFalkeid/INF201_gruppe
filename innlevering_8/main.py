@@ -38,20 +38,26 @@ from typing import Optional
 #-------------------------------------------------------------------------------------------------------------------
 # Task 2
 
-
-
-
-class Point:
-    def __init__(self, index: int, x: float, y: float, z: float):
+class Mesh_object(ABC):
+    def __init__(self, index: int):
+        super().__init__()
         self._index = index
+        
+    @property
+    def index(self):
+        return self._index
+    
+    def __str__(self):
+        return f'Mesh object with index {self.index}'
+
+
+class Point(Mesh_object):
+    def __init__(self, index: int, x: float, y: float, z: float):
+        super().__init__(index)
         
         self._x = x
         self._y = y
         self._z = z
-    
-    @property
-    def index(self):
-        return self._index
     
     @property
     def x(self):
@@ -66,47 +72,69 @@ class Point:
         return self._z
     
     def __str__(self):
-        return f'Point: {self.index} at (x, y, z): ({self.x}, {self.y}, {self.z})'
+        string = super().__str__()
+        string += f'\n  Is Point at (x, y, z): ({self.x}, {self.y}, {self.z})'
+        return string
         
 
-class Cell(ABC):
-    def __init__(self, index: int):
-        super().__init__()
-        self._index = index
+class Cell(Mesh_object, ABC):
+    def __init__(self, index: int, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int):
+        # 1st integer: element numbering.
+        # 2nd integer: element type.
+        # 3rd integer: number of tags.
+        # 4th integer: physical entity; FEconv use this number to create PMH element groups.
+        # 5th integer: elementary entity; when saving a Gmsh mesh, FEconv also uses the element numbering as elementary entity.
+        # Next integers: several node numbers that defines connectivities.
+        super().__init__(index)
+        self._type = element_type
+        self._num_tags = num_tags
+        self._physical_entity = physical_entity
+        self._elementary_entity = elementary_entity
         self._points = []
     
-    @abstractmethod
-    def __str__(self):
-        string = 'Index: ' + str(self._index)
-        return string
+    @property
+    def type(self):
+        return self._type
     
     @property
-    def index(self):
-        return self._index
+    def num_tags(self):
+        return self._num_tags
+    
+    @property
+    def physical_entity(self):
+        return self._physical_entity
+    
+    @property
+    def elementary_entity(self):
+        return self._elementary_entity
     
     @property
     def points(self):
         return self._points
     
+    def __str__(self):
+        string = super().__str__()
+        string += f'\n  Has element type {self.type}, number of tags is {self.num_tags}, physical entity is {self.physical_entity} and elementary entity is {self.elementary_entity}.'
+        return string
 
 class Triangle(Cell):
-    def __init__(self, index, point_1, point_2, point_3):
-        super().__init__(index)
+    def __init__(self, index, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, point_1, point_2, point_3):
+        super().__init__(index, element_type, num_tags, physical_entity, elementary_entity)
         self._points = [point_1, point_2, point_3]
     
     def __str__(self):
         string = super().__str__()
-        string += f', Points: ({self._point[0]}, {self._point[1]}, {self._point[2]})'
+        string += f'\n  The cell is constructed from Points: ({self._points[0]}, {self._points[1]}, {self._points[2]})'
         return string
         
 class Line(Cell):
-    def __init__(self, index, point_1, point_2):
-        super().__init__(index)
+    def __init__(self, index, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, point_1, point_2):
+        super().__init__(index, element_type, num_tags, physical_entity, elementary_entity)
         self._points = [point_1, point_2]
     
     def __str__(self):
         string = super().__str__()
-        string += f', Points: ({self._point[0]}, {self._point[1]})'
+        string += f'\n  The cell is constructed from Points: ({self._points[0]}, {self._points[1]})'
         return string
 
 class Mesh:
@@ -147,29 +175,35 @@ class Mesh:
                 if line == '':
                     break
                 elif line == '$MeshFormat':
+                    line = file.readline().strip().split(' ')
                     while line != '$EndMeshFormat':
-                        line = file.readline().strip()
+                        line = [float(line[0]), int(line[1]), int(line[2])]
                         self._format = line
-                elif line == '$PhysicalNames':
-                    while line != '$EndPhysicalNames':
                         line = file.readline().strip()
+                elif line == '$PhysicalNames':
+                    self._num_physical_names = file.readline().strip()
+                    line = file.readline().strip()
+                    while line != '$EndPhysicalNames':
+                        line = line.split(' ')
+                        line = [int(line[0]), int(line[1]), line[2].strip('"')]
                         self._physical_names.append(line)
+                        line = file.readline().strip()
                 elif line == '$Nodes':
                     line = file.readline().strip()
                     self._num_nodes = int(line)
                     line = file.readline().strip().split(' ')
                     while line[0] != '$EndNodes':
-                        self._points.append(Point(int(line[0]), float(line[1]), float(line[2]), float(line[3])))
+                        self._points.append(Point(int(line[0]), x=float(line[1]), y=float(line[2]), z=float(line[3])))
                         line = file.readline().strip().split(' ')
                 elif line == '$Elements':
                     line = file.readline().strip()
                     self._num_elements = line
                     line = file.readline().strip().split(' ')
                     while len(line) < 8:
-                        self._cells.append(Line(int(line[0]), float(line[5]), float(line[6])))
+                        self._cells.append(Line(int(line[0]), element_type=int(line[1]), num_tags=int(line[2]), physical_entity=int(line[3]), elementary_entity=int(line[4]), point_1=int(line[5]), point_2=int(line[6])))
                         line = file.readline().strip().split(' ')
                     while line[0] != '$EndElements':
-                        self._cells.append(Line(int(line[0]), float(line[5]), float(line[6])))
+                        self._cells.append(Triangle(int(line[0]), element_type=int(line[1]), num_tags=int(line[2]), physical_entity=int(line[3]), elementary_entity=int(line[4]), point_1=int(line[5]), point_2=int(line[6]), point_3=int(line[7])))
                         line = file.readline().strip().split(' ')
                 
     
@@ -180,9 +214,16 @@ class Mesh:
     @property
     def cells(self):
         return self._cells
-
-trekant = Triangle(1, 1, 2, 3)
+    
+    def __str__(self):
+        return f'Mesh with {len(self.points)} points and {len(self.cells)} cells'
 
 path = Path.cwd() / Path('simple.msh')
 mesh = Mesh(path)
-print(mesh.points)
+
+for point in mesh.points:
+    print(point)
+print()
+
+for cell in mesh.cells:
+    print(cell)
