@@ -291,15 +291,21 @@ class Mesh:
         i_list = []
         for cell in self.cells:
             if cell.type == 1:
-                n_list.append(f"Cell {cell.index}:")
+                n_list.append(f"Cell {cell.index}, Type {cell.type}")
                 for j in self.cells:
-                    if len(set(cell.points.copy()) & set(j.points.copy())) > 0:
-                        n_list.append(j.index)
+                    if len(set(cell.points.copy()) & set(j.points.copy())) > j.type-1:
+                        n_list.append({"id": j.index, "type": j.type})
                 i_list.append(n_list)
                 n_list = []
-            #if cell.type == 2:
-
-        print(i_list)
+            if cell.type == 2:
+                n_list.append(f"Cell {cell.index}, Type {cell.type}")
+                for k in self.cells:
+                    if len(set(cell.points) & set(k.points)) >= 2:# and cell.index != k.index:# and cell.type != k.type):
+                        n_list.append({"id": k.index, "type": k.type})
+                i_list.append(n_list)
+                n_list = []
+        for l in i_list:
+            print(l)
         print(type(i_list[0][0]))
 
 
