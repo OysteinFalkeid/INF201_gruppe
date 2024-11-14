@@ -58,7 +58,6 @@ class Mesh_object(ABC):
     def __str__(self):
         return f'Mesh object with index {self.index}'
 
-
 class Point(Mesh_object):
     def __init__(self, index: int, x: float, y: float, z: float):
         '''
@@ -87,7 +86,6 @@ class Point(Mesh_object):
         string += f'\n  Is Point at (x, y, z): ({self.x}, {self.y}, {self.z})'
         return string
         
-
 class Cell(Mesh_object, ABC):
     def __init__(self, index: int, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, points: list[int]):
         super().__init__(index)
@@ -312,20 +310,17 @@ class Mesh:
     def __str__(self):
         return f'Mesh with {len(self.points)} points and {len(self.cells)} cells'
 
-path = Path.cwd() / Path('simple.msh')
-mesh = Mesh(path)
 
-for point in mesh.points:
-    print(point)
-print()
+def main():
+    path = Path.cwd() / Path('simple.msh')
+    mesh = Mesh(path)
 
-for cell in mesh.cells:
-    print(cell)
+    for point in mesh.points:
+        print(point)
+    print()
 
-test_fac = MeshFactory()
-list_0 = [1, 2, 3, 4, 5, 6, 7, 8]
-list_1 = [1, 2, 3, 4, 5, 6, 7]
-cell_0 = test_fac(list_0)
-cell_1 = test_fac(list_1)
-print(cell_0)
-print(cell_1)
+    for cell in mesh.cells:
+        print(cell)
+    
+if __name__ == '__main__':
+    main()
