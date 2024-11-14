@@ -307,9 +307,25 @@ class Mesh:
     def cells(self):
         return self._cells
     
+    def determineNeighbors(self):
+        n_list = []
+        i_list = []
+        for cell in self.cells:
+            if cell.type == 1:
+                n_list.append(f"Cell {cell.index}:")
+                for j in self.cells:
+                    if len(set(cell.points.copy()) & set(j.points.copy())) > 0:
+                        n_list.append(j.index)
+                i_list.append(n_list)
+                n_list = []
+            #if cell.type == 2:
+
+        print(i_list)
+        print(type(i_list[0][0]))
+
+
     def __str__(self):
         return f'Mesh with {len(self.points)} points and {len(self.cells)} cells'
-
 
 def main():
     path = Path.cwd() / Path('simple.msh')
@@ -321,6 +337,8 @@ def main():
 
     for cell in mesh.cells:
         print(cell)
+
+    mesh.determineNeighbors()
     
 if __name__ == '__main__':
     main()
