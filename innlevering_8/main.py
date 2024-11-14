@@ -40,11 +40,19 @@ from typing import Optional
 
 class Mesh_object(ABC):
     def __init__(self, index: int):
+        '''
+        Abstract class for objects in a mesh. The objects can be points or cells
+        '''
         super().__init__()
         self._index = index
         
     @property
     def index(self):
+        '''
+        Returns the index of the mesh object
+        
+        points
+        '''
         return self._index
     
     def __str__(self):
@@ -53,6 +61,9 @@ class Mesh_object(ABC):
 
 class Point(Mesh_object):
     def __init__(self, index: int, x: float, y: float, z: float):
+        '''
+        Point class for defining a point in mesh
+        '''
         super().__init__(index)
         
         self._x = x
@@ -78,19 +89,13 @@ class Point(Mesh_object):
         
 
 class Cell(Mesh_object, ABC):
-    def __init__(self, index: int, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int):
-        # 1st integer: element numbering.
-        # 2nd integer: element type.
-        # 3rd integer: number of tags.
-        # 4th integer: physical entity; FEconv use this number to create PMH element groups.
-        # 5th integer: elementary entity; when saving a Gmsh mesh, FEconv also uses the element numbering as elementary entity.
-        # Next integers: several node numbers that defines connectivities.
+    def __init__(self, index: int, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, points: list[int]):
         super().__init__(index)
         self._type = element_type
         self._num_tags = num_tags
         self._physical_entity = physical_entity
         self._elementary_entity = elementary_entity
-        self._points = []
+        self._points = points
     
     @property
     def type(self):
@@ -117,30 +122,18 @@ class Cell(Mesh_object, ABC):
         string += f'\n  Has element type {self.type}, number of tags is {self.num_tags}, physical entity is {self.physical_entity} and elementary entity is {self.elementary_entity}.'
         return string
 
-# class Triangle(Cell):
-#     def __init__(self, index, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, point_1, point_2, point_3):
-#         super().__init__(index, element_type, num_tags, physical_entity, elementary_entity)
-#         self._points = [point_1, point_2, point_3]
-
 class Triangle(Cell):
-    def __init__(self, index, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, point : list):
-        super().__init__(index, element_type, num_tags, physical_entity, elementary_entity)
-        self._points = point
+    def __init__(self, index, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, points : list[int]):
+        super().__init__(index, element_type, num_tags, physical_entity, elementary_entity, points)
     
     def __str__(self):
         string = super().__str__()
         string += f'\n  The cell is constructed from Points: ({self._points[0]}, {self._points[1]}, {self._points[2]})'
         return string
-        
-# class Line(Cell):
-#     def __init__(self, index, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, point_1, point_2):
-#         super().__init__(index, element_type, num_tags, physical_entity, elementary_entity)
-#         self._points = [point_1, point_2]
 
 class Line(Cell):
-    def __init__(self, index, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, point : list):
-        super().__init__(index, element_type, num_tags, physical_entity, elementary_entity)
-        self._points = point
+    def __init__(self, index, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, points : list[int]):
+        super().__init__(index, element_type, num_tags, physical_entity, elementary_entity, points)
     
     def __str__(self):
         string = super().__str__()
