@@ -41,7 +41,9 @@ from typing import Optional
 class Mesh_object(ABC):
     def __init__(self, index: int):
         '''
-        Abstract class for objects in a mesh. The objects can be points or cells
+        Abstract class for objects in a mesh. 
+        
+        The objects can be points or cells
         '''
         super().__init__()
         self._index = index
@@ -51,11 +53,16 @@ class Mesh_object(ABC):
         '''
         Returns the index of the mesh object
         
-        points
+        Points and cells have indexes starting from 1.
+        Meaning point 1 and cell 1 can exist
         '''
         return self._index
     
+    @abstractmethod
     def __str__(self):
+        '''
+        The base string method for all objects in a mesh
+        '''
         return f'Mesh object with index {self.index}'
 
 class Point(Mesh_object):
@@ -71,53 +78,107 @@ class Point(Mesh_object):
     
     @property
     def x(self):
+        '''
+        Returns the x coordinate of the point
+        '''
         return self._x
     
     @property
     def y(self):
+        '''
+        Returns the y coordinate of the point
+        '''
         return self._y
     
     @property
     def z(self):
+        '''
+        Returns the z coordinate of the point
+        '''
         return self._z
     
     def __str__(self):
+        '''
+        Return a string describing the Point object
+        '''
         string = super().__str__()
         string += f'\n  Is Point at (x, y, z): ({self.x}, {self.y}, {self.z})'
         return string
         
 class Cell(Mesh_object, ABC):
     def __init__(self, index: int, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, points: list[int]):
+        '''
+        Abstract class for defining cells in a mesh.
+        
+        The object can contain lines, triangles or other poligons
+        '''
         super().__init__(index)
         self._type = element_type
         self._num_tags = num_tags
         self._physical_entity = physical_entity
         self._elementary_entity = elementary_entity
         self._points = points
+        self._neigbors = []
+        self._is_edge = False
     
     @property
     def type(self):
+        '''
+        Returns the type of cell
+        
+        1 = line
+        2 = triange
+        ...
+        '''
         return self._type
     
     @property
     def num_tags(self):
+        '''
+        Returns the number of tags
+        '''
         return self._num_tags
     
     @property
     def physical_entity(self):
+        '''
+        Returns the physical entity
+        '''
         return self._physical_entity
     
     @property
     def elementary_entity(self):
+        '''
+        Returns the elementary entity
+        '''
         return self._elementary_entity
     
     @property
     def points(self):
+        '''
+        Returns the index of the points  
+        '''
         return self._points
     
+    @property
+    def neighbors(self):
+        return self._neigbors
+    
+    @neighbors.setter
+    def neighbors(self, neighbors):
+        self._neigbors = neighbors
+        
+    @property
+    def is_edge(self):
+        return self._is_edge
+        
+    @abstractmethod
     def __str__(self):
         string = super().__str__()
         string += f'\n  Has element type {self.type}, number of tags is {self.num_tags}, physical entity is {self.physical_entity} and elementary entity is {self.elementary_entity}.'
+        string += f'\n  The cell has naboring cells with index of {self.neighbors}.'
+        if self.is_edge:
+            string += '\n  The cell is a part of the edge.'
         return string
 
 class Triangle(Cell):
