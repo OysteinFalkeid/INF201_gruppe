@@ -301,27 +301,33 @@ class Mesh:
         line_type = 1
         triangle_type = 2
         for cell in self.cells:
-            #iterates lines
+            # Itesrate lines
             if cell.type == line_type:
-                # # n_list.append(f"Cell {cell.index}, Type {cell.type}")
                 for neighbor in self.cells:
+                    # Itesrate potential neighbors
                     if len(set(cell.points) & set(neighbor.points)) > neighbor.type-1 and ((cell.index != neighbor.index) or (cell.type != neighbor.type)):
+                        # len(set(cell.points) & set(neighbor.points)) > neighbor.type-1
+                        # The 'set()' typecasts the list to set. 
+                        # The '&' returns a set containing items in both sets.
+                        # neighbor.type is 1 for line and 2 for triangle.
+                        # If the lenght is larger than 0 there are 1 or more points in both cells with the same index.
+                        # If the lenght is larger than 1 there are 2 points in both cells with the same index.
                         n_list.append({"id": neighbor.index, "type": neighbor.type})
-                cell.neighbors = n_list# # [1:]
-                # # i_list.append(n_list)
+                cell.neighbors = n_list
                 n_list = []
             
-            #iterates Triangles
+            # Itesrate Triangles
             if cell.type == triangle_type:
-                # n_list.append(f"Cell {cell.index}, Type {cell.type}")
                 for neighbor in self.cells:
-                    if len(set(cell.points) & set(neighbor.points)) >= 2 and ((cell.index != neighbor.index) or (cell.type != neighbor.type)):
+                    # Itesrate potential neighbors
+                    if len(set(cell.points) & set(neighbor.points)) > 1 and ((cell.index != neighbor.index) or (cell.type != neighbor.type)):
+                        # len(set(cell.points) & set(neighbor.points)) >= 2 
+                        # The set() typecasts the list to set. 
+                        # The & returns a set containing items in both sets.
+                        # If the lenght is larger than 1 there are 2 points in both cells with the same index.
                         n_list.append({"id": neighbor.index, "type": neighbor.type})
-                cell.neighbors = n_list# # [1:]
-        #         # i_list.append(n_list)
+                cell.neighbors = n_list
                 n_list = []
-        # # for l in i_list:
-        # #     print(l)
 
 
     def __str__(self):
