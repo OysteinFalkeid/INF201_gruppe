@@ -176,7 +176,7 @@ class Cell(Mesh_object, ABC):
     def __str__(self):
         string = super().__str__()
         string += f'\n  Has element type {self.type}, number of tags is {self.num_tags}, physical entity is {self.physical_entity} and elementary entity is {self.elementary_entity}.'
-        string += f'\n  The cell has naboring cells with index of {self.neighbors}.'
+        string += f'\n  The cell has neighboring cells with index of {self.neighbors}.'
         if self.is_edge:
             string += '\n  The cell is a part of the edge.'
         return string
@@ -237,7 +237,7 @@ class Mesh:
             Emptey object
         '''
         self._points = []
-        self._cells = []
+        self._cells: list[Cell] = []
         if path:
             self.mesh = self.read(path)
         
@@ -298,24 +298,30 @@ class Mesh:
     def determineNeighbors(self):
         n_list = []
         i_list = []
+        line_type = 1
+        triangle_type = 2
         for cell in self.cells:
-            if cell.type == 1:
+            #iterates lines
+            if cell.type == line_type:
                 n_list.append(f"Cell {cell.index}, Type {cell.type}")
-                for j in self.cells:
-                    if len(set(cell.points.copy()) & set(j.points.copy())) > j.type-1:
-                        n_list.append({"id": j.index, "type": j.type})
+                for neighbor in self.cells:
+                    if len(set(cell.points) & set(neighbor.points)) > neighbor.type-1 and ((cell.index != neighbor.index) or (cell.type != neighbor.type)):
+                        n_list.append({"id": neighbor.index, "type": neighbor.type})
+                cell.neighbors = n_list[1:]
                 i_list.append(n_list)
                 n_list = []
-            if cell.type == 2:
+            
+            #iterates Triangles
+            if cell.type == triangle_type:
                 n_list.append(f"Cell {cell.index}, Type {cell.type}")
-                for k in self.cells:
-                    if len(set(cell.points) & set(k.points)) >= 2:# and cell.index != k.index:# and cell.type != k.type):
-                        n_list.append({"id": k.index, "type": k.type})
+                for neighbor in self.cells:
+                    if len(set(cell.points) & set(neighbor.points)) >= 2 and ((cell.index != neighbor.index) or (cell.type != neighbor.type)):
+                        n_list.append({"id": neighbor.index, "type": neighbor.type})
+                cell.neighbors = n_list[1:]
                 i_list.append(n_list)
                 n_list = []
         for l in i_list:
             print(l)
-        print(type(i_list[0][0]))
 
 
     def __str__(self):
@@ -333,6 +339,12 @@ def main():
         print(cell)
 
     mesh.determineNeighbors()
+    print()
+    print('----------------------------------------------------------------------------------------------------------------')
+    print()
+    
+    for cell in mesh.cells:
+        print(cell.neighbors)
     
 if __name__ == '__main__':
     main()
