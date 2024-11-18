@@ -200,17 +200,26 @@ class Line(Cell):
         return string
 
 class MeshFactory:
-    def __init__(self):
-        self._shape = {7: Line, 8: Triangle}
-    def register(self, key, shape_class):
-        self._shape[key] = shape_class
+    def __init__(self, shape: dict = {7: Line, 8: Triangle}):
+        self._shape = shape
+    
+    @property
+    def shape(self):
+        return self._shape
+    
+    @shape.setter
+    def append(self, key_shape_iterable ):
+        try:
+            key, shape_class = key_shape_iterable
+        except ValueError:
+            raise ValueError("Pass an iterable with two items")
+        else:
+            self._shape[key] = shape_class
+        
     def __call__(self, list):
         length = len(list)
-        if length not in self._shape:
-            return f"error"
-        else:
-            list = [int(i) for i in list]
-            return self._shape[length](list[0], list[1], list[2], list[3], list[4], list[5:])
+        list = [int(i) for i in list]
+        return self._shape[length](list[0], list[1], list[2], list[3], list[4], list[5:])
 
 class Mesh:
     def __init__(self, path: Optional[str] = None):
