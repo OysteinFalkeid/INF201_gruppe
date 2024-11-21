@@ -167,7 +167,12 @@ class Cell(Mesh_object, ABC):
     @neighbors.setter
     def neighbors(self, neighbors):
         self._neigbors = neighbors
-        
+        self._test_edge()
+    
+    @abstractmethod  
+    def _test_edge(self):
+        pass
+            
     @property
     def is_edge(self):
         return self._is_edge
@@ -185,6 +190,10 @@ class Triangle(Cell):
     def __init__(self, index, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, points : list[int]):
         super().__init__(index, element_type, num_tags, physical_entity, elementary_entity, points)
     
+    def _test_edge(self):
+        #test for at trekanten er nabo med en linje og to mangekanter
+        pass
+    
     def __str__(self):
         string = super().__str__()
         string += f'\n  The cell is constructed from Points: ({self._points[0]}, {self._points[1]}, {self._points[2]})'
@@ -193,6 +202,11 @@ class Triangle(Cell):
 class Line(Cell):
     def __init__(self, index, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, points : list[int]):
         super().__init__(index, element_type, num_tags, physical_entity, elementary_entity, points)
+    
+      
+    def _test_edge(self):
+        #test for at linjen er nabo med kun en mangekant
+        pass
     
     def __str__(self):
         string = super().__str__()
