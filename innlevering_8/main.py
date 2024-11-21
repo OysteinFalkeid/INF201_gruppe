@@ -352,20 +352,11 @@ def main():
     mesh = Mesh(path)
 
     mesh.determineNeighbors()
-    
-    for point in mesh.points:
-        print(point)
-    print()
 
     for cell in mesh.cells:
-        print(cell)
-        
-    print()
-    print('----------------------------------------------------------------------------------------------------------------')
-    print()
-    
-    for cell in mesh.cells:
-        print(cell.neighbors)
+        if cell.index == 4 or cell.index == 189 or cell.index == 222:
+            print(cell)
+            print('')
     
 if __name__ == '__main__':
     main()
