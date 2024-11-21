@@ -106,7 +106,7 @@ class Point(Mesh_object):
         return string
         
 class Cell(Mesh_object, ABC):
-    def __init__(self, index: int, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, points: list[int]):
+    def __init__(self, index: int, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, points: list[int], line_neighbor, polygon_neighbor):
         '''
         Abstract class for defining cells in a mesh.
         
@@ -120,6 +120,8 @@ class Cell(Mesh_object, ABC):
         self._points = points
         self._neigbors = []
         self._is_edge = False
+        self._line_neighbor = line_neighbor
+        self._polygon_neighbor = polygon_neighbor
     
     @property
     def type(self):
@@ -168,10 +170,17 @@ class Cell(Mesh_object, ABC):
     def neighbors(self, neighbors):
         self._neigbors = neighbors
         self._test_edge()
-    
-    @abstractmethod  
+     
     def _test_edge(self):
-        pass
+        line = 0
+        triangle = 0
+        for i in self.neighbors:
+            if i['type'] == 1:
+                line += 1
+            else:
+                triangle += 1
+        if line == self._line_neighbor and triangle == self._polygon_neighbor:
+            self._is_edge = True
             
     @property
     def is_edge(self):
@@ -186,47 +195,22 @@ class Cell(Mesh_object, ABC):
             string += '\n  The cell is a part of the edge.'
         return string
 
-class Triangle(Cell):
-    def __init__(self, index, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, points : list[int]):
-        super().__init__(index, element_type, num_tags, physical_entity, elementary_entity, points)
-    
-    def _test_edge(self):
-        #test for at trekanten er nabo med en linje og to mangekanter
-        line = 0
-        triangle = 0
-        for i in self.neighbors:
-            if i['type'] == 1:
-                line += 1
-            else:
-                triangle += 1
-        if line == 1 and triangle == 2:
-            self._is_edge = True
-    
-    def __str__(self):
-        string = super().__str__()
-        string += f'\n  The cell is constructed from Points: ({self._points[0]}, {self._points[1]}, {self._points[2]})'
-        return string
-
 class Line(Cell):
     def __init__(self, index, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, points : list[int]):
-        super().__init__(index, element_type, num_tags, physical_entity, elementary_entity, points)
-    
-      
-    def _test_edge(self):
-        #test for at trekanten er nabo med en linje og to mangekanter
-        line = 0
-        triangle = 0
-        for i in self.neighbors:
-            if i['type'] == 1:
-                line += 1
-            else:
-                triangle += 1
-        if line == 2 and triangle == 1:
-            self._is_edge = True
+        super().__init__(index, element_type, num_tags, physical_entity, elementary_entity, points, line_neighbor=2, polygon_neighbor=1)
     
     def __str__(self):
         string = super().__str__()
         string += f'\n  The cell is constructed from Points: ({self._points[0]}, {self._points[1]})'
+        return string
+
+class Triangle(Cell):
+    def __init__(self, index, element_type: int, num_tags: int, physical_entity: int, elementary_entity: int, points : list[int]):
+        super().__init__(index, element_type, num_tags, physical_entity, elementary_entity, points, line_neighbor=1, polygon_neighbor=2)
+    
+    def __str__(self):
+        string = super().__str__()
+        string += f'\n  The cell is constructed from Points: ({self._points[0]}, {self._points[1]}, {self._points[2]})'
         return string
 
 class MeshFactory:
