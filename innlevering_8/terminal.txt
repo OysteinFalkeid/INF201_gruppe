@@ -500,278 +500,347 @@ Mesh object with index 244
 Mesh object with index 1
   Has element type 1, number of tags is 2, physical entity is 5 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 2, 'type': 1}, {'id': 10, 'type': 1}, {'id': 234, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (1, 6)
 Mesh object with index 2
   Has element type 1, number of tags is 2, physical entity is 5 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 1, 'type': 1}, {'id': 3, 'type': 1}, {'id': 100, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (6, 7)
 Mesh object with index 3
   Has element type 1, number of tags is 2, physical entity is 5 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 2, 'type': 1}, {'id': 4, 'type': 1}, {'id': 130, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (7, 8)
 Mesh object with index 4
   Has element type 1, number of tags is 2, physical entity is 5 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 3, 'type': 1}, {'id': 5, 'type': 1}, {'id': 240, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (8, 9)
 Mesh object with index 5
   Has element type 1, number of tags is 2, physical entity is 5 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 4, 'type': 1}, {'id': 6, 'type': 1}, {'id': 190, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (9, 10)
 Mesh object with index 6
   Has element type 1, number of tags is 2, physical entity is 5 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 5, 'type': 1}, {'id': 7, 'type': 1}, {'id': 367, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (10, 11)
 Mesh object with index 7
   Has element type 1, number of tags is 2, physical entity is 5 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 6, 'type': 1}, {'id': 8, 'type': 1}, {'id': 134, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (11, 12)
 Mesh object with index 8
   Has element type 1, number of tags is 2, physical entity is 5 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 7, 'type': 1}, {'id': 9, 'type': 1}, {'id': 377, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (12, 13)
 Mesh object with index 9
   Has element type 1, number of tags is 2, physical entity is 5 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 8, 'type': 1}, {'id': 37, 'type': 1}, {'id': 232, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (13, 2)
 Mesh object with index 10
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 1, 'type': 1}, {'id': 11, 'type': 1}, {'id': 235, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (1, 14)
 Mesh object with index 11
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 10, 'type': 1}, {'id': 12, 'type': 1}, {'id': 237, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (14, 15)
 Mesh object with index 12
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 11, 'type': 1}, {'id': 13, 'type': 1}, {'id': 94, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (15, 16)
 Mesh object with index 13
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 12, 'type': 1}, {'id': 14, 'type': 1}, {'id': 365, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (16, 17)
 Mesh object with index 14
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 13, 'type': 1}, {'id': 15, 'type': 1}, {'id': 246, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (17, 18)
 Mesh object with index 15
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 14, 'type': 1}, {'id': 16, 'type': 1}, {'id': 315, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (18, 19)
 Mesh object with index 16
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 15, 'type': 1}, {'id': 17, 'type': 1}, {'id': 327, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (19, 20)
 Mesh object with index 17
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 16, 'type': 1}, {'id': 18, 'type': 1}, {'id': 395, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (20, 21)
 Mesh object with index 18
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 17, 'type': 1}, {'id': 19, 'type': 1}, {'id': 285, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (21, 22)
 Mesh object with index 19
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 18, 'type': 1}, {'id': 20, 'type': 1}, {'id': 402, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (22, 23)
 Mesh object with index 20
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 19, 'type': 1}, {'id': 21, 'type': 1}, {'id': 273, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (23, 24)
 Mesh object with index 21
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 20, 'type': 1}, {'id': 22, 'type': 1}, {'id': 207, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (24, 25)
 Mesh object with index 22
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 21, 'type': 1}, {'id': 23, 'type': 1}, {'id': 184, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (25, 26)
 Mesh object with index 23
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 22, 'type': 1}, {'id': 24, 'type': 1}, {'id': 387, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (26, 27)
 Mesh object with index 24
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 23, 'type': 1}, {'id': 25, 'type': 1}, {'id': 109, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (27, 28)
 Mesh object with index 25
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 24, 'type': 1}, {'id': 26, 'type': 1}, {'id': 217, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (28, 29)
 Mesh object with index 26
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 25, 'type': 1}, {'id': 27, 'type': 1}, {'id': 406, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (29, 30)
 Mesh object with index 27
   Has element type 1, number of tags is 2, physical entity is 4 and elementary entity is 2.
   The cell has neighboring cells with index and type [{'id': 26, 'type': 1}, {'id': 28, 'type': 1}, {'id': 276, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (30, 3)
 Mesh object with index 28
   Has element type 1, number of tags is 2, physical entity is 3 and elementary entity is 3.
   The cell has neighboring cells with index and type [{'id': 27, 'type': 1}, {'id': 29, 'type': 1}, {'id': 275, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (3, 31)
 Mesh object with index 29
   Has element type 1, number of tags is 2, physical entity is 3 and elementary entity is 3.
   The cell has neighboring cells with index and type [{'id': 28, 'type': 1}, {'id': 30, 'type': 1}, {'id': 159, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (31, 32)
 Mesh object with index 30
   Has element type 1, number of tags is 2, physical entity is 3 and elementary entity is 3.
   The cell has neighboring cells with index and type [{'id': 29, 'type': 1}, {'id': 31, 'type': 1}, {'id': 376, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (32, 33)
 Mesh object with index 31
   Has element type 1, number of tags is 2, physical entity is 3 and elementary entity is 3.
   The cell has neighboring cells with index and type [{'id': 30, 'type': 1}, {'id': 32, 'type': 1}, {'id': 249, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (33, 34)
 Mesh object with index 32
   Has element type 1, number of tags is 2, physical entity is 3 and elementary entity is 3.
   The cell has neighboring cells with index and type [{'id': 31, 'type': 1}, {'id': 33, 'type': 1}, {'id': 73, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (34, 35)
 Mesh object with index 33
   Has element type 1, number of tags is 2, physical entity is 3 and elementary entity is 3.
   The cell has neighboring cells with index and type [{'id': 32, 'type': 1}, {'id': 34, 'type': 1}, {'id': 318, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (35, 36)
 Mesh object with index 34
   Has element type 1, number of tags is 2, physical entity is 3 and elementary entity is 3.
   The cell has neighboring cells with index and type [{'id': 33, 'type': 1}, {'id': 35, 'type': 1}, {'id': 87, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (36, 37)
 Mesh object with index 35
   Has element type 1, number of tags is 2, physical entity is 3 and elementary entity is 3.
   The cell has neighboring cells with index and type [{'id': 34, 'type': 1}, {'id': 36, 'type': 1}, {'id': 178, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (37, 38)
 Mesh object with index 36
   Has element type 1, number of tags is 2, physical entity is 3 and elementary entity is 3.
   The cell has neighboring cells with index and type [{'id': 35, 'type': 1}, {'id': 54, 'type': 1}, {'id': 361, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (38, 4)
 Mesh object with index 37
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 9, 'type': 1}, {'id': 38, 'type': 1}, {'id': 233, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (2, 39)
 Mesh object with index 38
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 37, 'type': 1}, {'id': 39, 'type': 1}, {'id': 238, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (39, 40)
 Mesh object with index 39
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 38, 'type': 1}, {'id': 40, 'type': 1}, {'id': 95, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (40, 41)
 Mesh object with index 40
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 39, 'type': 1}, {'id': 41, 'type': 1}, {'id': 366, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (41, 42)
 Mesh object with index 41
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 40, 'type': 1}, {'id': 42, 'type': 1}, {'id': 245, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (42, 43)
 Mesh object with index 42
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 41, 'type': 1}, {'id': 43, 'type': 1}, {'id': 314, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (43, 44)
 Mesh object with index 43
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 42, 'type': 1}, {'id': 44, 'type': 1}, {'id': 326, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (44, 45)
 Mesh object with index 44
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 43, 'type': 1}, {'id': 45, 'type': 1}, {'id': 396, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (45, 46)
 Mesh object with index 45
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 44, 'type': 1}, {'id': 46, 'type': 1}, {'id': 284, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (46, 47)
 Mesh object with index 46
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 45, 'type': 1}, {'id': 47, 'type': 1}, {'id': 403, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (47, 48)
 Mesh object with index 47
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 46, 'type': 1}, {'id': 48, 'type': 1}, {'id': 154, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (48, 49)
 Mesh object with index 48
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 47, 'type': 1}, {'id': 49, 'type': 1}, {'id': 349, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (49, 50)
 Mesh object with index 49
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 48, 'type': 1}, {'id': 50, 'type': 1}, {'id': 122, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (50, 51)
 Mesh object with index 50
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 49, 'type': 1}, {'id': 51, 'type': 1}, {'id': 75, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (51, 52)
 Mesh object with index 51
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 50, 'type': 1}, {'id': 52, 'type': 1}, {'id': 325, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (52, 53)
 Mesh object with index 52
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 51, 'type': 1}, {'id': 53, 'type': 1}, {'id': 90, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (53, 54)
 Mesh object with index 53
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 52, 'type': 1}, {'id': 54, 'type': 1}, {'id': 185, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (54, 55)
 Mesh object with index 54
   Has element type 1, number of tags is 2, physical entity is 2 and elementary entity is 4.
   The cell has neighboring cells with index and type [{'id': 36, 'type': 1}, {'id': 53, 'type': 1}, {'id': 362, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (55, 4)
 Mesh object with index 55
   Has element type 1, number of tags is 2, physical entity is 6 and elementary entity is 5.
   The cell has neighboring cells with index and type [{'id': 56, 'type': 1}, {'id': 69, 'type': 1}, {'id': 286, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (5, 56)
 Mesh object with index 56
   Has element type 1, number of tags is 2, physical entity is 6 and elementary entity is 5.
   The cell has neighboring cells with index and type [{'id': 55, 'type': 1}, {'id': 57, 'type': 1}, {'id': 129, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (56, 57)
 Mesh object with index 57
   Has element type 1, number of tags is 2, physical entity is 6 and elementary entity is 5.
   The cell has neighboring cells with index and type [{'id': 56, 'type': 1}, {'id': 58, 'type': 1}, {'id': 272, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (57, 58)
 Mesh object with index 58
   Has element type 1, number of tags is 2, physical entity is 6 and elementary entity is 5.
   The cell has neighboring cells with index and type [{'id': 57, 'type': 1}, {'id': 59, 'type': 1}, {'id': 118, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (58, 59)
 Mesh object with index 59
   Has element type 1, number of tags is 2, physical entity is 6 and elementary entity is 5.
   The cell has neighboring cells with index and type [{'id': 58, 'type': 1}, {'id': 60, 'type': 1}, {'id': 205, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (59, 60)
 Mesh object with index 60
   Has element type 1, number of tags is 2, physical entity is 6 and elementary entity is 5.
   The cell has neighboring cells with index and type [{'id': 59, 'type': 1}, {'id': 61, 'type': 1}, {'id': 304, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (60, 61)
 Mesh object with index 61
   Has element type 1, number of tags is 2, physical entity is 6 and elementary entity is 5.
   The cell has neighboring cells with index and type [{'id': 60, 'type': 1}, {'id': 62, 'type': 1}, {'id': 120, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (61, 62)
 Mesh object with index 62
   Has element type 1, number of tags is 2, physical entity is 6 and elementary entity is 5.
   The cell has neighboring cells with index and type [{'id': 61, 'type': 1}, {'id': 63, 'type': 1}, {'id': 281, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (62, 63)
 Mesh object with index 63
   Has element type 1, number of tags is 2, physical entity is 6 and elementary entity is 5.
   The cell has neighboring cells with index and type [{'id': 62, 'type': 1}, {'id': 64, 'type': 1}, {'id': 119, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (63, 64)
 Mesh object with index 64
   Has element type 1, number of tags is 2, physical entity is 6 and elementary entity is 5.
   The cell has neighboring cells with index and type [{'id': 63, 'type': 1}, {'id': 65, 'type': 1}, {'id': 303, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (64, 65)
 Mesh object with index 65
   Has element type 1, number of tags is 2, physical entity is 6 and elementary entity is 5.
   The cell has neighboring cells with index and type [{'id': 64, 'type': 1}, {'id': 66, 'type': 1}, {'id': 204, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (65, 66)
 Mesh object with index 66
   Has element type 1, number of tags is 2, physical entity is 6 and elementary entity is 5.
   The cell has neighboring cells with index and type [{'id': 65, 'type': 1}, {'id': 67, 'type': 1}, {'id': 72, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (66, 67)
 Mesh object with index 67
   Has element type 1, number of tags is 2, physical entity is 6 and elementary entity is 5.
   The cell has neighboring cells with index and type [{'id': 66, 'type': 1}, {'id': 68, 'type': 1}, {'id': 107, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (67, 68)
 Mesh object with index 68
   Has element type 1, number of tags is 2, physical entity is 6 and elementary entity is 5.
   The cell has neighboring cells with index and type [{'id': 67, 'type': 1}, {'id': 69, 'type': 1}, {'id': 189, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (68, 69)
 Mesh object with index 69
   Has element type 1, number of tags is 2, physical entity is 6 and elementary entity is 5.
   The cell has neighboring cells with index and type [{'id': 55, 'type': 1}, {'id': 68, 'type': 1}, {'id': 255, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (69, 5)
 Mesh object with index 70
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -784,10 +853,12 @@ Mesh object with index 71
 Mesh object with index 72
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 66, 'type': 1}, {'id': 112, 'type': 2}, {'id': 124, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (66, 110, 67)
 Mesh object with index 73
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 32, 'type': 1}, {'id': 70, 'type': 2}, {'id': 167, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (35, 119, 34)
 Mesh object with index 74
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -796,6 +867,7 @@ Mesh object with index 74
 Mesh object with index 75
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 50, 'type': 1}, {'id': 71, 'type': 2}, {'id': 82, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (51, 117, 52)
 Mesh object with index 76
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -844,6 +916,7 @@ Mesh object with index 86
 Mesh object with index 87
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 34, 'type': 1}, {'id': 102, 'type': 2}, {'id': 220, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (37, 125, 36)
 Mesh object with index 88
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -856,6 +929,7 @@ Mesh object with index 89
 Mesh object with index 90
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 52, 'type': 1}, {'id': 110, 'type': 2}, {'id': 226, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (53, 124, 54)
 Mesh object with index 91
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -872,10 +946,12 @@ Mesh object with index 93
 Mesh object with index 94
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 12, 'type': 1}, {'id': 146, 'type': 2}, {'id': 179, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (16, 113, 15)
 Mesh object with index 95
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 39, 'type': 1}, {'id': 147, 'type': 2}, {'id': 180, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (40, 114, 41)
 Mesh object with index 96
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -896,6 +972,7 @@ Mesh object with index 99
 Mesh object with index 100
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 2, 'type': 1}, {'id': 80, 'type': 2}, {'id': 130, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (6, 172, 7)
 Mesh object with index 101
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -924,6 +1001,7 @@ Mesh object with index 106
 Mesh object with index 107
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 67, 'type': 1}, {'id': 108, 'type': 2}, {'id': 332, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (67, 189, 68)
 Mesh object with index 108
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -932,6 +1010,7 @@ Mesh object with index 108
 Mesh object with index 109
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 24, 'type': 1}, {'id': 126, 'type': 2}, {'id': 171, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (28, 126, 27)
 Mesh object with index 110
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -968,14 +1047,17 @@ Mesh object with index 117
 Mesh object with index 118
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 58, 'type': 1}, {'id': 88, 'type': 2}, {'id': 422, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (58, 235, 59)
 Mesh object with index 119
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 63, 'type': 1}, {'id': 79, 'type': 2}, {'id': 425, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (63, 219, 64)
 Mesh object with index 120
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 61, 'type': 1}, {'id': 78, 'type': 2}, {'id': 424, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (61, 218, 62)
 Mesh object with index 121
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -984,6 +1066,7 @@ Mesh object with index 121
 Mesh object with index 122
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 49, 'type': 1}, {'id': 82, 'type': 2}, {'id': 330, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (50, 132, 51)
 Mesh object with index 123
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1012,10 +1095,12 @@ Mesh object with index 128
 Mesh object with index 129
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 56, 'type': 1}, {'id': 74, 'type': 2}, {'id': 186, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (56, 120, 57)
 Mesh object with index 130
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 3, 'type': 1}, {'id': 83, 'type': 2}, {'id': 100, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (7, 172, 8)
 Mesh object with index 131
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1032,6 +1117,7 @@ Mesh object with index 133
 Mesh object with index 134
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 7, 'type': 1}, {'id': 183, 'type': 2}, {'id': 215, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (11, 122, 12)
 Mesh object with index 135
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1112,6 +1198,7 @@ Mesh object with index 153
 Mesh object with index 154
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 47, 'type': 1}, {'id': 169, 'type': 2}, {'id': 270, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (48, 129, 49)
 Mesh object with index 155
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1132,6 +1219,7 @@ Mesh object with index 158
 Mesh object with index 159
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 29, 'type': 1}, {'id': 142, 'type': 2}, {'id': 442, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (32, 171, 31)
 Mesh object with index 160
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1208,6 +1296,7 @@ Mesh object with index 177
 Mesh object with index 178
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 35, 'type': 1}, {'id': 102, 'type': 2}, {'id': 139, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (38, 182, 37)
 Mesh object with index 179
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1232,10 +1321,12 @@ Mesh object with index 183
 Mesh object with index 184
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 22, 'type': 1}, {'id': 197, 'type': 2}, {'id': 310, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (26, 133, 25)
 Mesh object with index 185
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 53, 'type': 1}, {'id': 110, 'type': 2}, {'id': 144, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (54, 184, 55)
 Mesh object with index 186
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1252,10 +1343,12 @@ Mesh object with index 188
 Mesh object with index 189
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 68, 'type': 1}, {'id': 288, 'type': 2}, {'id': 332, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (68, 131, 69)
 Mesh object with index 190
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 5, 'type': 1}, {'id': 219, 'type': 2}, {'id': 309, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (9, 135, 10)
 Mesh object with index 191
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1312,10 +1405,12 @@ Mesh object with index 203
 Mesh object with index 204
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 65, 'type': 1}, {'id': 124, 'type': 2}, {'id': 229, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (65, 187, 66)
 Mesh object with index 205
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 59, 'type': 1}, {'id': 125, 'type': 2}, {'id': 230, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (59, 188, 60)
 Mesh object with index 206
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1324,6 +1419,7 @@ Mesh object with index 206
 Mesh object with index 207
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 21, 'type': 1}, {'id': 197, 'type': 2}, {'id': 317, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (25, 138, 24)
 Mesh object with index 208
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1364,6 +1460,7 @@ Mesh object with index 216
 Mesh object with index 217
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 25, 'type': 1}, {'id': 171, 'type': 2}, {'id': 344, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (29, 139, 28)
 Mesh object with index 218
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1424,18 +1521,22 @@ Mesh object with index 231
 Mesh object with index 232
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 9, 'type': 1}, {'id': 233, 'type': 2}, {'id': 451, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (13, 181, 2)
 Mesh object with index 233
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 37, 'type': 1}, {'id': 210, 'type': 2}, {'id': 232, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (2, 181, 39)
 Mesh object with index 234
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 1, 'type': 1}, {'id': 80, 'type': 2}, {'id': 235, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (1, 180, 6)
 Mesh object with index 235
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 10, 'type': 1}, {'id': 209, 'type': 2}, {'id': 234, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (14, 180, 1)
 Mesh object with index 236
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1444,10 +1545,12 @@ Mesh object with index 236
 Mesh object with index 237
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 11, 'type': 1}, {'id': 146, 'type': 2}, {'id': 209, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (15, 201, 14)
 Mesh object with index 238
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 38, 'type': 1}, {'id': 147, 'type': 2}, {'id': 210, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (39, 202, 40)
 Mesh object with index 239
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1456,6 +1559,7 @@ Mesh object with index 239
 Mesh object with index 240
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 4, 'type': 1}, {'id': 121, 'type': 2}, {'id': 219, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (8, 150, 9)
 Mesh object with index 241
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1476,10 +1580,12 @@ Mesh object with index 244
 Mesh object with index 245
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 41, 'type': 1}, {'id': 113, 'type': 2}, {'id': 374, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (42, 152, 43)
 Mesh object with index 246
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 14, 'type': 1}, {'id': 114, 'type': 2}, {'id': 373, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (18, 151, 17)
 Mesh object with index 247
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1492,6 +1598,7 @@ Mesh object with index 248
 Mesh object with index 249
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 31, 'type': 1}, {'id': 167, 'type': 2}, {'id': 430, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (34, 153, 33)
 Mesh object with index 250
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1516,6 +1623,7 @@ Mesh object with index 254
 Mesh object with index 255
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 69, 'type': 1}, {'id': 252, 'type': 2}, {'id': 288, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (69, 212, 5)
 Mesh object with index 256
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1584,10 +1692,12 @@ Mesh object with index 271
 Mesh object with index 272
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 57, 'type': 1}, {'id': 74, 'type': 2}, {'id': 422, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (57, 141, 58)
 Mesh object with index 273
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 20, 'type': 1}, {'id': 302, 'type': 2}, {'id': 317, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (24, 234, 23)
 Mesh object with index 274
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1596,10 +1706,12 @@ Mesh object with index 274
 Mesh object with index 275
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 28, 'type': 1}, {'id': 142, 'type': 2}, {'id': 276, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (31, 192, 3)
 Mesh object with index 276
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 27, 'type': 1}, {'id': 275, 'type': 2}, {'id': 485, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (3, 192, 30)
 Mesh object with index 277
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1620,6 +1732,7 @@ Mesh object with index 280
 Mesh object with index 281
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 62, 'type': 1}, {'id': 424, 'type': 2}, {'id': 425, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (62, 149, 63)
 Mesh object with index 282
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1632,14 +1745,17 @@ Mesh object with index 283
 Mesh object with index 284
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 45, 'type': 1}, {'id': 322, 'type': 2}, {'id': 334, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (46, 147, 47)
 Mesh object with index 285
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 18, 'type': 1}, {'id': 323, 'type': 2}, {'id': 333, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (22, 146, 21)
 Mesh object with index 286
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 55, 'type': 1}, {'id': 353, 'type': 2}, {'id': 360, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (5, 177, 56)
 Mesh object with index 287
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1708,10 +1824,12 @@ Mesh object with index 302
 Mesh object with index 303
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 64, 'type': 1}, {'id': 283, 'type': 2}, {'id': 449, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (64, 155, 65)
 Mesh object with index 304
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 60, 'type': 1}, {'id': 282, 'type': 2}, {'id': 448, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (60, 154, 61)
 Mesh object with index 305
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1752,10 +1870,12 @@ Mesh object with index 313
 Mesh object with index 314
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 42, 'type': 1}, {'id': 136, 'type': 2}, {'id': 444, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (43, 208, 44)
 Mesh object with index 315
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 15, 'type': 1}, {'id': 135, 'type': 2}, {'id': 445, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (19, 209, 18)
 Mesh object with index 316
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1768,6 +1888,7 @@ Mesh object with index 317
 Mesh object with index 318
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 33, 'type': 1}, {'id': 70, 'type': 2}, {'id': 220, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (36, 161, 35)
 Mesh object with index 319
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1796,14 +1917,17 @@ Mesh object with index 324
 Mesh object with index 325
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 51, 'type': 1}, {'id': 71, 'type': 2}, {'id': 226, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (52, 160, 53)
 Mesh object with index 326
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 43, 'type': 1}, {'id': 346, 'type': 2}, {'id': 444, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (44, 158, 45)
 Mesh object with index 327
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 16, 'type': 1}, {'id': 347, 'type': 2}, {'id': 445, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (20, 159, 19)
 Mesh object with index 328
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1892,6 +2016,7 @@ Mesh object with index 348
 Mesh object with index 349
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 48, 'type': 1}, {'id': 169, 'type': 2}, {'id': 330, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (49, 170, 50)
 Mesh object with index 350
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1940,10 +2065,12 @@ Mesh object with index 360
 Mesh object with index 361
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 36, 'type': 1}, {'id': 164, 'type': 2}, {'id': 362, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (4, 225, 38)
 Mesh object with index 362
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 54, 'type': 1}, {'id': 165, 'type': 2}, {'id': 361, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (55, 225, 4)
 Mesh object with index 363
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -1956,14 +2083,17 @@ Mesh object with index 364
 Mesh object with index 365
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 13, 'type': 1}, {'id': 179, 'type': 2}, {'id': 373, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (17, 175, 16)
 Mesh object with index 366
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 40, 'type': 1}, {'id': 180, 'type': 2}, {'id': 374, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (41, 176, 42)
 Mesh object with index 367
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 6, 'type': 1}, {'id': 183, 'type': 2}, {'id': 309, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (10, 178, 11)
 Mesh object with index 368
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -2000,10 +2130,12 @@ Mesh object with index 375
 Mesh object with index 376
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 30, 'type': 1}, {'id': 430, 'type': 2}, {'id': 442, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (33, 232, 32)
 Mesh object with index 377
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 8, 'type': 1}, {'id': 215, 'type': 2}, {'id': 451, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (12, 203, 13)
 Mesh object with index 378
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -2044,6 +2176,7 @@ Mesh object with index 386
 Mesh object with index 387
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 23, 'type': 1}, {'id': 126, 'type': 2}, {'id': 310, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (27, 199, 26)
 Mesh object with index 388
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -2076,10 +2209,12 @@ Mesh object with index 394
 Mesh object with index 395
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 17, 'type': 1}, {'id': 333, 'type': 2}, {'id': 347, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (21, 221, 20)
 Mesh object with index 396
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 44, 'type': 1}, {'id': 334, 'type': 2}, {'id': 346, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (45, 222, 46)
 Mesh object with index 397
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -2104,10 +2239,12 @@ Mesh object with index 401
 Mesh object with index 402
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 19, 'type': 1}, {'id': 323, 'type': 2}, {'id': 479, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (23, 242, 22)
 Mesh object with index 403
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 46, 'type': 1}, {'id': 270, 'type': 2}, {'id': 322, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (47, 241, 48)
 Mesh object with index 404
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
@@ -2120,6 +2257,7 @@ Mesh object with index 405
 Mesh object with index 406
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.
   The cell has neighboring cells with index and type [{'id': 26, 'type': 1}, {'id': 344, 'type': 2}, {'id': 485, 'type': 2}].
+  The cell is a part of the edge.
   The cell is constructed from Points: (30, 227, 29)
 Mesh object with index 407
   Has element type 2, number of tags is 2, physical entity is 1 and elementary entity is 1.

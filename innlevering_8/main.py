@@ -192,7 +192,15 @@ class Triangle(Cell):
     
     def _test_edge(self):
         #test for at trekanten er nabo med en linje og to mangekanter
-        pass
+        line = 0
+        triangle = 0
+        for i in self.neighbors:
+            if i['type'] == 1:
+                line += 1
+            else:
+                triangle += 1
+        if line == 1 and triangle == 2:
+            self._is_edge = True
     
     def __str__(self):
         string = super().__str__()
@@ -205,8 +213,16 @@ class Line(Cell):
     
       
     def _test_edge(self):
-        #test for at linjen er nabo med kun en mangekant
-        pass
+        #test for at trekanten er nabo med en linje og to mangekanter
+        line = 0
+        triangle = 0
+        for i in self.neighbors:
+            if i['type'] == 1:
+                line += 1
+            else:
+                triangle += 1
+        if line == 2 and triangle == 1:
+            self._is_edge = True
     
     def __str__(self):
         string = super().__str__()
