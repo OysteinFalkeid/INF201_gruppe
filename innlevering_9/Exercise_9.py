@@ -4,7 +4,6 @@ from typing import Union, Optional
 import abc
 
 # Task 0
-
 class Vector2D:
     def __init__(self, x, y):
         self.x = x
@@ -16,7 +15,7 @@ a = Vector2D(1.0, 2.0)
 b = Vector2D(3.0, 3.5)
 c = a.add_vectors(b)  
 
-@pytest.mark.parameterize("a,b,c",[Vector2D(1.0,2.0), Vector2D(4.0,4.0), Vector2D(5.0,6.0)])
+#@pytest.mark.parameterize("a,b,c",[Vector2D(1.0,2.0), Vector2D(4.0,4.0), Vector2D(5.0,6.0)])
 def test_add_vectors(a, b, c):
     c = a + b
     assert c.x == a.x + b.x
