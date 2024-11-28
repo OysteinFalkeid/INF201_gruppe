@@ -1,4 +1,4 @@
-from main import Complex
+from Exercise_9 import Complex
 
 # Add opperation
 print(Complex(-4.06, 3.89) + Complex(1.7, -1.75))
