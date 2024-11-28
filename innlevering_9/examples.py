@@ -1,4 +1,4 @@
-from Exercise_9 import Complex
+from Exercise_9 import Complex, Immaginary
 
 # Add opperation
 print('1 ', Complex(-4.06, 3.89) + Complex(1.7, -1.75))
@@ -26,7 +26,14 @@ print('12 ',Complex(-4.55, -2.29) / 1)
 print('13 ', Complex(0, 3.52) + Complex(0, 4.14))
 print('14 ', Complex(0, -1.84) - Complex(0, -1.91))
 print('15 ', Complex(0, -4.03) * Complex(0, -0.9))
-print('16 ', Complex(0, 1.2) / Complex(1, 3.54))
+print('16 ', Complex(0, 1.2) / Complex(1, 3.54)) # changed to 1 instead of 0, else division by zero
 
+# Conjugate
+print('17 ', Complex(2, 2).__conj__())
 
+# Constant value add/sub/mul/div
+print('18 ', Complex(2,-3) + 4 + Immaginary(2))
+print('19 ', Complex(2,-3) - 4 - Immaginary(2))
+print('20 ', Complex(2,-3) * 4)
+print('21 ', Complex(2,-3) / 4)
 

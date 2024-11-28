@@ -62,12 +62,13 @@ class Complex:
         
     def __truediv__(self, const):
         if type(const) == int or type(const) == float: 
-            return Complex(const / self.re, const / self.im)
+            return Complex(self.re / const, self.im / const)
+           
         else:
             return Complex(self.re / const.re, self.im / const.im)
     def __rtruediv__(self, const):
         if type(const) == int or type(const) == float: 
-            return Complex(self.re / const, self.im / const)
+             return Complex(const / self.re, const / self.im)
         else:
             return Complex(const.re / self.re, const.im / self.im)
 
