@@ -32,22 +32,17 @@ class Complex:
             return Complex(self.re + other, self.im)
         else:  
             return Complex(self.re + other.re, self.im + other.im)
-
     def __radd__(self, other):
         if type(other) == int or type(other) == float:
             return Complex(other + self.re, self.im)
         else:
             return Complex(other.re + self.re, other.im + self.im)
 
-    def __conj__(self):
-        return Complex(self.re, -self.im)
-
     def __sub__(self, other):
         if type(other) == int or type(other) == float:
             return Complex(self.re - other, self.im)
         else:
             return Complex(self.re - other.re, self.im - other.im)
-        
     def __rsub__(self, other):
         if type(other) == int or type(other) == float:
             return Complex(other - self.re, self.im)
@@ -59,7 +54,6 @@ class Complex:
             return Complex(const * self.re, const * self.im)
         else:
             return Complex(self.re * const.re, self.im * const.im)
-
     def __rmul__(self, const):
         if type(const) == int or type(const) == float: 
             return Complex(self.re * const, self.im * const)
@@ -71,38 +65,42 @@ class Complex:
             return Complex(const / self.re, const / self.im)
         else:
             return Complex(self.re / const.re, self.im / const.im)
-        
     def __rtruediv__(self, const):
         if type(const) == int or type(const) == float: 
             return Complex(self.re / const, self.im / const)
         else:
             return Complex(const.re / self.re, const.im / self.im)
 
+    def __conj__(self):
+        return Complex(self.re, -self.im)
+
     def __str__(self):
         if self.im > 0:
             return f"{self.re} + {self.im}i"
         else:
             return f"{self.re} - {abs(self.im)}i"
+        
 class Real:
     def __init__(self, re):
         self.re = re
         self.im = 0
+
 class Immaginary:
     def __init__(self, im):
         self.im = im
         self.re = 0
 
-a = Complex(-1,2) + 4
-b = Complex(3,2) + Immaginary(2) + Real(2)
-c = Complex() - 2 - Immaginary(2)
-d = a.__conj__()
-e = a - b + c
-f = 2 * a * 3
-g = a / b
-print('a = ', a)
-print('b = ', b)
-print('c = ', c)
-print('d = ', d)
-print('e = ', e)
-print('f = ', f)
-print('g = ', g)
+# a = Complex(-1,2) + 4
+# b = Complex(3,2) + Immaginary(2) + Real(2)
+# c = Complex() - 2 - Immaginary(2)
+# d = a.__conj__()
+# e = a - b + c
+# f = 2 * a * 3
+# g = a / b
+# print('a = ', a)
+# print('b = ', b)
+# print('c = ', c)
+# print('d = ', d)
+# print('e = ', e)
+# print('f = ', f)
+# print('g = ', g)
