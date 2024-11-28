@@ -32,11 +32,11 @@ class Complex:
         else:  
             return Complex(self.re + other.re, self.im + other.im)
     def __radd__(self, other):
-        return Complex(self.re + other.re, self.im + other.im)
+            return Complex(self.re + other, self.im)
     def __conj__(self):
         return self.re, -self.im
     def __str__(self):
-        return f"z = {self.re} + {self.im}i"
+        return f"{self.re} + {self.im}i"
 class Immaginary:
     def __init__(self, im):
         self.im = im
