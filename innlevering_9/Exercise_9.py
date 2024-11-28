@@ -24,9 +24,9 @@ def test_add_vectors(a, b, c):
 
 # Task 1
 class Complex:
-    def __init__(self, re, im):
-        self.re = re
-        self.im = im
+    def __init__(self, re = 0, im = 0):
+            self.re = re
+            self.im = im
     def __add__(self, other):
         if type(other) == int or type(other) == float:
             return Complex(self.re + other, self.im)
@@ -34,6 +34,8 @@ class Complex:
             return Complex(self.re + other.re, self.im + other.im)
     def __radd__(self, other):
         return Complex(self.re + other.re, self.im + other.im)
+    def __conj__(self):
+        return self.re, -self.im
     def __str__(self):
         return f"z = {self.re} + {self.im}i"
 class Immaginary:
@@ -41,7 +43,9 @@ class Immaginary:
         self.im = im
         self.re = 0
 
-a = Complex(1,2) + 4
+a = Complex(-1,2) + 4
 b = Complex(3,2) + Immaginary(2)
+c = Complex()
 print(a)
 print(b)
+print(c)
