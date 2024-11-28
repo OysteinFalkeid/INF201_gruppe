@@ -28,14 +28,20 @@ class Complex:
         self.re = re
         self.im = im
     def __add__(self, other):
-        return Complex(self.re + other.re, self.im + other.im)
+        if type(other) == int or type(other) == float:
+            return Complex(self.re + other, self.im)
+        else:  
+            return Complex(self.re + other.re, self.im + other.im)
     def __radd__(self, other):
         return Complex(self.re + other.re, self.im + other.im)
-    # def __mul__(self, other):
-    #     return Complex(self.re * other.re, self.im * other)s
     def __str__(self):
         return f"z = {self.re} + {self.im}i"
-    
-a = Complex(1,2)
-b = Complex(3,2)
-print(a+b)
+class Immaginary:
+    def __init__(self, im):
+        self.im = im
+        self.re = 0
+
+a = Complex(1,2) + 4
+b = Complex(3,2) + Immaginary(2)
+print(a)
+print(b)
