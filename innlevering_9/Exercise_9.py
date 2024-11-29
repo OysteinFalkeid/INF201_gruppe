@@ -45,7 +45,7 @@ class Complex:
             return Complex(self.re - other.re, self.im - other.im)
     def __rsub__(self, other):
         if type(other) == int or type(other) == float:
-            return Complex(other - self.re, self.im)
+            return Complex(other - self.re, -self.im)
         else:
             return Complex(other.re - self.re, other.im - self.im)
 
