@@ -69,9 +69,9 @@ class Complex:
 
     def __str__(self):
         if self.im > 0:
-            return f"{self.re} + {self.im}i"
+            return f"{round(self.re, 4)} + {round(self.im, 4)}i"
         else:
-            return f"{self.re} - {abs(self.im)}i"
+            return f"{round(self.re, 4)} - {round(abs(self.im), 4)}i"
         
 class Real:
     def __init__(self, re):
