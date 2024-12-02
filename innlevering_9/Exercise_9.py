@@ -35,8 +35,6 @@ class Complex:
     def __radd__(self, other):
         if type(other) == int or type(other) == float:
             return Complex(other + self.re, self.im)
-        else:
-            return Complex(other.re + self.re, other.im + self.im)
 
     def __sub__(self, other):
         if type(other) == int or type(other) == float:
@@ -46,31 +44,25 @@ class Complex:
     def __rsub__(self, other):
         if type(other) == int or type(other) == float:
             return Complex(other - self.re, -self.im)
-        else:
-            return Complex(other.re - self.re, other.im - self.im)
 
     def __mul__(self, const):
         if type(const) == int or type(const) == float: 
             return Complex(const * self.re, const * self.im)
         else:
-            return Complex(self.re * const.re, self.im * const.im)
+            return Complex(self.re * const.re  - self.im * const.im, self.im * const.re + self.re * const.im)
     def __rmul__(self, const):
         if type(const) == int or type(const) == float: 
             return Complex(self.re * const, self.im * const)
-        else:
-            return Complex(const.re * self.re, const.im * self.im)
         
     def __truediv__(self, const):
         if type(const) == int or type(const) == float: 
             return Complex(self.re / const, self.im / const)
            
         else:
-            return Complex(self.re / const.re, self.im / const.im)
+            return Complex((self.re * const.re + self.im * const.im) / (const.re**2 + const.im**2), (self.im * const.re - self.re * const.im) / (const.re**2 + const.im**2))
     def __rtruediv__(self, const):
         if type(const) == int or type(const) == float: 
-             return Complex(const / self.re, const / self.im)
-        else:
-            return Complex(const.re / self.re, const.im / self.im)
+             return Complex(const * self.re / (self.re**2 + self.im**2), - const * self.im / (self.re**2 + self.im**2))
 
     def __conj__(self):
         return Complex(self.re, -self.im)

@@ -67,4 +67,4 @@ def test_div_with_complex():
 def test_rdiv_with_real():
     complex = Complex(2, 4)
     result = 2 / complex
-    assert result.re == (1/2) and result.im == -(1/2), f'Complex should be 2 + 2i but is {result}'
+    assert result.re == 0.2 and result.im == -0.4, f'Complex should be 2 + 2i but is {result}'
